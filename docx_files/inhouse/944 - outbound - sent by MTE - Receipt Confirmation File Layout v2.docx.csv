@@ -1,0 +1,180 @@
+Record_Name,Field Business Name,"Field
+Length","Starting
+Position","Required/ Optional
+",Description
+PARTNER,PARTNER,X(8),1,R,Identify the Record ‘PARTNER’
+PARTNER,PARTNER,X(10),9,R,"Identify the PARTNER ID
+
+Check Customer EDI Partner ID field
+If the above not populated use Customer Reference field (first 10 characters)
+If the above not populated use Customer Code"
+PARTNER,SET,X(3),1,R,Identify the Record ‘SET’
+PARTNER,SET,X(3),9,R,Transaction Set ID ‘944’
+PARTNER,ROUTE,X(8),1,R,Identify the Record ‘ROUTE’ 
+PARTNER,ROUTE,X(10),9,R,Customer Code in A1 3PL
+PARTNER,COMPANY,X(8),1,R,Identify the Record ‘COMPANY’
+PARTNER,COMPANY,X(2),9,R,Company Code in A1 3PL
+PARTNER,BEGIN,X(5),1,R,Identify Record
+1020,Record Type,X(4),1,R,"Record Type 
+1020"
+1020,Reporting Code,X(1),5,R,"Reporting Code
+F – Full Detail"
+1020,Date of Receipt,X(8),6,O,"Receipt Date
+Format ‘CCYYMMDD’"
+1020,Warehouse Receipt Number,X12),14,R,Warehouse Receipt Number
+1020,Depositor Order Number,X(22),26,O,Receipt Reference Number
+1020,Shipment Identification,X(30),48,O,Receipt Pro-Bill Number
+1020,Time Qualifier,X(2),78,O,Not Used
+1020,Time,X(8),80,O,Not Used
+1020,Master Reference,X(22),88,O,Receipt Alternate Reference 1
+1020,Link Sequence Number,X(8),110,O,Receipt Alternate Reference 2
+1020,Filler,X(383),118,O,Filler – blanks
+1040,Record Type,X(4),1,R,"Record Type 
+1040"
+1040,Entity ID Code,X(3),5,R,"Organization ID Code
+‘WH’ – Warehouse"
+1040,Name,X(60),8,R,Company Name
+1040,ID Type,X(2),68,O,"ID Type
+‘91’ – Assigned by Seller or Seller’s Agent"
+1040,Entity Code,X(80),70,O,Company External Reference Number
+1040,Filler,X(351),150,O,
+1040,Record Type,X(4),1,R,"Record Type 
+1040"
+1040,Entity ID Code,X(3),5,R,"Organization ID Code
+‘DE’ – Depositor"
+1040,Name,X(60),8,R,WarehouseLogic Customer Name
+1040,ID Type,X(2),68,O,"ID Type
+‘91’ – Assigned by Seller or Seller’s Agent"
+1040,Entity Code,X(80),70,O,Customer External Reference Number
+1040,Filler,X(351),150,O,
+1040,Record Type,X(4),1,R,"Record Type 
+1040"
+1040,Entity ID Code,X(3),5,R,"Organization ID Code
+‘SF’  -- Ship From"
+1040,Name,X(60),8,R,Shipper Name
+1040,ID Type,X(2),68,O,"ID Type
+‘91’ – Assigned by Seller or Seller’s Agent"
+1040,Entity Code,X(80),70,O,Shipper Identification Number supplied on 943 transaction Set
+1040,Filler,X(351),150,O,
+1060,Record Type,X(4),1,R,"Record Type
+1060"
+1060,Address,X(55),5,O,Shipper Address 1
+1060,Address,X(55),60,O,Shipper Address 2
+1060,Filler,X(386),115,O,
+1070,Record Type,X(4),1,R,"Record Type
+1070"
+1070,City,X(30),5,O,Shipper City Name
+1070,State,X(2),35,O,Shipper State Code
+1070,Postal/Zip,X(15),37,O,Shipper Postal Code
+1070,Country,X(3),52,O,Country Code
+1070,Location Qualifier,X(2),55,O,Not used
+1070,Location,X(30),57,O,Not used
+1070,State Extended,X(4),87,O,State Code
+1070,Filler,X(410),91,O,
+1090,Record Type,X(4),1,R,"Record Type
+1090"
+1090,Qualifier,X(3),5,O,"Reference Qualifier
+Any qualifiers acceptable"
+1090,Reference ID,X(30),8,O,EDI Data
+1090,Reference Description,X(45),38,O,EDI Data
+1090,Filler,X(418),83,O,
+1110,Record Type,X(4),1,R,"Record Type 
+1110"
+1110,Qualifier,X(2),5,R,"Date Qualifier
+‘11’ – Shipped on this Date."
+1110,Date,X(8),7,R,Receipt Confirmation Date – ‘CCYYMMDD’
+1110,Filler,X(486),15,O,
+1130,Record Type,X(4),1,R,"Record Type 
+1130"
+1130,Transportation Method,X(2),5,R,"Transportation Method Code.
+Values:
+‘M’ – Motor;
+‘H’ – Customer Pick Up;
+‘U’ – UPS Carrier."
+1130,SCAC,X(4),7,R,"Standard Carrier Alpha Code.
+Default Value – ‘0000’."
+1130,Routing,X(35),11,R,Carrier Name
+1130,Equipment Initial,X(4),46,O,Carrier Power Unit Number 
+1130,Equipment Number,X(10),50,O,Carrier Unit Number
+1130,Seal Number,X(15),60,O,Seal 1
+1130,Seal Number,X(15),75,O,Seal 2
+1130,Seal Status Code,X(2),90,O,Reserved for Future
+1130,Unit Load Option Code,X(2),92,O,Reserved for Future
+1130,Filler,X(407),94,O,
+1140,Record Type,X(4),1,R,"Record Type 
+1140"
+1140,Temperature Probe Location Code,X(2),5,O,Reserved for Future
+1140,Temperature,X(6),7,O,Temperature 
+1140,Filler,X(488),13,O,
+1150,Record Type,X(4),1,R,"Record Type 
+1150"
+1150,Quantity of Pallets Received,X(5),5,O,Quantity of Pallets Received
+1150,Quantity of Pallets Shipped or Exchanged,X(5),10,O,Quantity of Pallets Shipped or Exchanged
+1150,Filler,X(486),16,O,
+2020,Record Type,X(4),1,R,"Record Type 
+2020"
+2020,Quantity Received,X(9),5,R,Quantity Received
+2020,Unit of Measurement Code,X(2),14,R,Unit of Measurement Code
+2020,UPC Case Code,X(12),16,O,UPC Case Code
+2020,Product ID Qualifier ,X(2),28,R,Product ID Qualifier VN
+2020,Product ID,X(48),30,R,Item Code
+2020,Product ID Qualifier,X(2),78,O,Product ID Qualifier ‘PD’
+2020,Product ID,X(48),80,O,Inventory Level 3
+2020,Lot Number,X(12),128,O,First 12 Characters of Inventory Level 2
+2020,Warehouse Detail Adjustment Identifier,X(1),140,O,Not Used
+2020,Product ID Qualifier,X(2),141,O,Product ID Qualifier ‘ZZ’
+2020,Product ID,X(48),143,O,Inventory Level 4
+2020,Reason Code,X(4),191,O,Reason Code
+2020,Filler,X(306),195,O,
+2030,Record Type,X(4),1,R,"Record Type
+2030"
+2030,Product Description,X(45),5,R,Item Description
+2030,Description 2,X(40),50,O,Inventory Level 2 Description
+2030,Description 3,X(40),90,O,Inventory Level 3 Description
+2030,Description 4,X(40),130,O,Inventory Level 4 Description
+2030,Item Description 2,X(60),170,O,Item Description 2
+2030,Filler,X(271),230,O,
+2040,Record Type,X(4),1,R,"Record Type
+2040"
+2040,Qualifier,X(3),5,O,"Reference Qualifier
+Any qualifiers acceptable"
+2040,Reference ID,X(30),8,O,EDI Data
+2040,Reference Description,X(45),38,O,EDI Data
+2040,Filler,X(418),83,O,
+2050,Record Type,X(4),1,R,"Record Type
+2050"
+2050,Filler,X(20),5,O,
+2050,Weight,X(12),25,R,Gross Weight
+2050,Weight Qualifier,X(2),37,R,‘U’
+2050,Weight Unit Code,X(1),39,R,‘L’ – Pounds;
+2050,Filler,X(461),40,O,
+2070,Record Type,X(4),1,R,"Record Type
+2070"
+2070,Quantity,X(17),5,R,Quantity on Hold
+2070,Unit Of Measure,X(2),22,R,Unit of Measure
+2070,Receiving Conditions,X(2),24,R,‘01’ – Product on Hold
+2070,Lot Number,X(12),26,O,First 12 characters of the Inventory Level 2
+2070,Damage Reason Code,X(2),38,O,Value ‘NR’
+2070,Filler,X(461),40,O,
+2070,Record Type,X(4),1,R,"Record Type
+2070"
+2070,Quantity,X(17),5,R,Quantity Short
+2070,Unit Of Measure,X(2),22,R,Unit of Measure
+2070,Receiving Conditions,X(2),24,R,‘02’ – Quantity Short
+2070,Lot Number,X(12),26,O,First 12 characters of the Inventory Level 2
+2070,Damage Reason Code,X(2),38,O,Value ‘NR’
+2070,Filler,X(461),40,O,
+2070,Record Type,X(4),1,R,"Record Type
+2070"
+2070,Quantity,X(17),5,R,Quantity Over
+2070,Unit Of Measure,X(2),22,R,Unit of Measure
+2070,Receiving Conditions,X(2),24,R,‘03’ – Quantity Over
+2070,Lot Number,X(12),26,O,First 12 characters of the Inventory Level 2
+2070,Damage Reason Code,X(2),38,O,Value ‘NR’
+2070,Filler,X(461),40,O,
+3010,Record Type,X(4),1,R,Record Type 3010
+3010,Quantity Received,X(9),5,R,Quantity Received
+3010,Quantity Shipped,X(12),14,R,Quantity Shipped
+3010,Quantity on Hold,X(11),26,O,Quantity on Hold
+3010,Filler,X(464),37,O,
+END,END,X(3),1,R,END

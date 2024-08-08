@@ -1,0 +1,2754 @@
+<?xml version="1.0" ?>
+<xsd:schema xmlns="http://www.seeburger.com/Project_Name/Schema_Name" xmlns:bic="http://www.seeburger.com/bicng/lang/schema/" xmlns:inhouse="http://www.seeburger.com/bicng/lang/schema/inhouse" xmlns:xsd="http://www.w3.org/2001/XMLSchema" bic:messageType="INHOUSE" elementFormDefault="qualified" targetNamespace="http://www.seeburger.com/Project_Name/Schema_Name">
+	<xsd:import namespace="http://www.seeburger.com/bicng/lang/schema/inhouse" schemaLocation="platform:/plugin/com.seeburger.bicng.lang.schema.facade.inhouse/resources/inhouse.xsd"/>
+	<xsd:element name="Schema_Name">
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="inhouse:InhouseMessageRoot">
+					<xsd:sequence>
+						<xsd:element maxOccurs="1" minOccurs="0" name="UNA">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="UNA" maxOccurs="1" minOccurs="0" name="S_UNA_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="UNA"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNA_UNA1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="1"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNA_UNA2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="1"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNA_UNA3">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="1"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNA_UNA4">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="1"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNA_UNA5">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="1"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNA_UNA6">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="1"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="UNB">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="UNB" maxOccurs="1" minOccurs="0" name="S_UNB_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="UNB"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNB_e0001">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="4"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNB_e0002">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="1"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNB_e0004">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNB_e0007">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="4"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNB_e0008">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="14"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNB_e0010">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNB_e0007_2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="4"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNB_e0014">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="14"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNB_e0017">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="6"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNB_e0019">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="4"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNB_e0020">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="14"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNB_e0022">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="14"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNB_e0025">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="2"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNB_e0026">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="14"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNB_e0029">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="1"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNB_e0031">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="1"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNB_e0032">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNB_e0035">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="1"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="UNH">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="UNH" maxOccurs="1" minOccurs="0" name="S_UNH_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="UNH"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNH_e0062">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="14"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNH_e0065">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="6"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNH_e0052">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNH_e0054">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNH_e0051">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="2"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNH_e0057">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="6"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNH_e0068">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNH_e0070">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="2"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNH_e0073">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="1"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="BGM">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="BGM" maxOccurs="1" minOccurs="0" name="S_BGM_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="BGM"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BGM_EBMENC">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BGM_EBLIQU">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BGM_EBLIRA">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BGM_EBMENM">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BGM_EBMENN">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BGM_EBMEFU">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BGM_EBRETY">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="DTM1">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="DTM1" maxOccurs="1" minOccurs="0" name="S_DTM1_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="DTM1"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_DTM1_E4CODI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_DTM1_E4VALO">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_DTM1_E4FORM">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="FTX1">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="FTX1" maxOccurs="1" minOccurs="0" name="S_FTX1_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="FTX1"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_FTX1_EFIDTX">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_FTX1_EFCDFU">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_FTX1_EFCDTE">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="17"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_FTX1_EFCLQU">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_FTX1_EFCLRE">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_FTX1_EFTES1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="512"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_FTX1_EFTES2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="512"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_FTX1_EFTES3">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="512"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_FTX1_EFTES4">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="512"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_FTX1_EFTES5">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="512"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_FTX1_EFCDLI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_FTX1_E4447">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="RFF1">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="RFF1" maxOccurs="1" minOccurs="0" name="S_RFF1_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="RFF1"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_RFF1_ERQURI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_RFF1_ERNRRI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_RFF1_ERNRLI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="6"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_RFF1_ERNRVR">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="DTM2">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="DTM2" maxOccurs="1" minOccurs="0" name="S_DTM2_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="DTM2"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_DTM2_E4CODI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_DTM2_E4VALO">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_DTM2_E4FORM">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="NAD">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="NAD" maxOccurs="1" minOccurs="0" name="S_NAD_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="NAD"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD_ENCDPA">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD_ENCDID">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD_ENCLQU">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD_ENCLRE">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD_ENNIN1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD_ENNIN2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD_ENNIN3">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD_ENNIN4">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD_ENNIN5">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD_ENNPE1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD_ENNPE2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD_ENNPE3">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD_ENNPE4">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD_ENNPE5">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD_ENCDFM">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD_ENVIA1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD_ENVIA2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="30"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD_ENVIA3">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="40"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD_ENCITT">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD_ENNAZI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="9"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD_ENCDCA">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="9"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD_ENCDNA">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="RFF2">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="RFF2" maxOccurs="1" minOccurs="0" name="S_RFF2_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="RFF2"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_RFF2_ERQURI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_RFF2_ERNRRI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_RFF2_ERNRLI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="6"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_RFF2_ERNRVR">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="CTA">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="CTA" maxOccurs="1" minOccurs="0" name="S_CTA_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="CTA"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_CTA_E2CODI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_CTA_E2ANIM">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="COM">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="COM" maxOccurs="1" minOccurs="0" name="S_COM_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="COM"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_COM_E1NUME">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="512"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_COM_E1QUCA">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="TOD">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="TOD" maxOccurs="1" minOccurs="0" name="S_TOD_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="TOD"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TOD_ETCDTC">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TOD_ETMPCA">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TOD_ETTECO">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TOD_ETCLQU">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TOD_ETCLRE">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TOD_ETTEC1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="70"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TOD_ETTEC2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="70"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="TDT">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="TDT" maxOccurs="1" minOccurs="0" name="S_TDT_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="TDT"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TDT_EWQAMT">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TDT_EWNRTR">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="17"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TDT_EWCDMT">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TDT_EWMETR">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="17"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TDT_EWITMT">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="8"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TDT_EWTIMT">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="17"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TDT_EWIDCO">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="17"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TDT_EWCLQU">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TDT_EWCLRE">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TDT_EWNMCO">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TDT_EWCDDT">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TDT_EWCDTE">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TDT_EWTREC">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TDT_EWNRAV">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="17"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TDT_EWIDTR">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="9"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TDT_EWCLQ2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TDT_EWCLR2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TDT_EWIDMT">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TDT_EWNAMT">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_TDT_EWPOMT">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="EQD">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="EQD" maxOccurs="1" minOccurs="0" name="S_EQD_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="EQD"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_EQD_EECODI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_EQD_EEIDNR">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="17"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_EQD_EECLQU">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_EQD_EECLRA">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_EQD_EECDNA">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_EQD_EECDDT">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="10"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_EQD_EECLQ2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_EQD_EECLR2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_EQD_EEVADT">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_EQD_EECDFO">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_EQD_EECDST">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_EQD_EEFLPV">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="EQN">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="EQN" maxOccurs="1" minOccurs="0" name="S_EQN_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="EQN"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_EQN_E5NRUN">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="15"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_EQN_E5IDNR">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="MEA">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="MEA" maxOccurs="1" minOccurs="0" name="S_MEA_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="MEA"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_MEA_EMCODI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_MEA_EMCDDI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_MEA_EMCDRI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_MEA_EMCDAT">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_MEA_EMVAAT">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="70"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_MEA_EMQUUN">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_MEA_EMVAMI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="18"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_MEA_EMLIMI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="18"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_MEA_EMLIMA">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="18"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_MEA_EMCISI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="2"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_MEA_EMCDST">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="LIN">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="LIN" maxOccurs="1" minOccurs="0" name="S_LIN_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="LIN"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_LIN_ELLINR">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="6"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_LIN_ELAZIO">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_LIN_ELNRAR">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_LIN_ELNRAT">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_LIN_ELCLQU">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_LIN_ELCLRE">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_LIN_ELCDSL">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_LIN_ELL2NR">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="6"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_LIN_ELLICF">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="2"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_LIN_ELCDCF">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="PIA">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="PIA" maxOccurs="1" minOccurs="0" name="S_PIA_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="PIA"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PIA_EKFUPR">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PIA_EKNUA1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PIA_EKTIA1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PIA_EKCLQ1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PIA_EKCLR1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PIA_EKNUA2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PIA_EKTIA2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PIA_EKCLQ2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PIA_EKCLR2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PIA_EKNUA3">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PIA_EKTIA3">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PIA_EKCLQ3">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PIA_EKCLR3">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PIA_EKNUA4">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PIA_EKTIA4">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PIA_EKCLQ4">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PIA_EKCLR4">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PIA_EKNUA5">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PIA_EKTIA5">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PIA_EKCLQ5">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PIA_EKCLR5">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="IMD">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="IMD" maxOccurs="1" minOccurs="0" name="S_IMD_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="IMD"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IMD_EICDTI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IMD_EICDCA">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IMD_EIDEID">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="17"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IMD_EICLQU">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IMD_EICLRE">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IMD_EIDES1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IMD_EIDES2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IMD_EICDLI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IMD_EICDSU">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="QTY">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="QTY" maxOccurs="1" minOccurs="0" name="S_QTY_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="QTY"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_QTY_EQQUQT">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_QTY_EQQUAN">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="15"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_QTY_EQQUUM">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="FTX2">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="FTX2" maxOccurs="1" minOccurs="0" name="S_FTX2_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="FTX2"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_FTX2_EFIDTX">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_FTX2_EFCDFU">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_FTX2_EFCDTE">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="17"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_FTX2_EFCLQU">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_FTX2_EFCLRE">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_FTX2_EFTES1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="512"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_FTX2_EFTES2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="512"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_FTX2_EFTES3">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="512"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_FTX2_EFTES4">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="512"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_FTX2_EFTES5">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="512"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_FTX2_EFCDLI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_FTX2_E4447">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="MOA1">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="MOA1" maxOccurs="1" minOccurs="0" name="S_MOA1_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="MOA1"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_MOA1_E_CDTI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_MOA1_E_VALO">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="18"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_MOA1_E_CDVA">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_MOA1_E_QUVA">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_MOA1_E_CDST">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="RFF3">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="RFF3" maxOccurs="1" minOccurs="0" name="S_RFF3_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="RFF3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_RFF3_ERQURI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_RFF3_ERNRRI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_RFF3_ERNRLI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="6"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_RFF3_ERNRVR">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="NAD2">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="NAD2" maxOccurs="1" minOccurs="0" name="S_NAD2_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="NAD2"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD2_ENCDPA">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD2_ENCDID">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD2_ENCLQU">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD2_ENCLRE">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD2_ENNIN1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD2_ENNIN2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD2_ENNIN3">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD2_ENNIN4">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD2_ENNIN5">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD2_ENNPE1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD2_ENNPE2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD2_ENNPE3">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD2_ENNPE4">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD2_ENNPE5">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD2_ENCDFM">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD2_ENVIA1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD2_ENVIA2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="30"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD2_ENVIA3">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="40"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD2_ENCITT">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD2_ENNAZI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="9"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD2_ENCDCA">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="9"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_NAD2_ENCDNA">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="LOC">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="LOC" maxOccurs="1" minOccurs="0" name="S_LOC_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="LOC"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_LOC_e3227">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_LOC_eC517_3225">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="25"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_LOC_eC517_1131">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_LOC_eC517_3055">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_LOC_eC517_3224">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="70"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_LOC_eC519_3223">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="25"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_LOC_eC519_1131">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_LOC_eC519_3055">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_LOC_eC519_3222">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="70"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_LOC_eC553_3233">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="25"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_LOC_eC553_1131">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_LOC_eC553_3055">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_LOC_eC553_3232">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="70"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_LOC_e5479">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="PCI">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="PCI" maxOccurs="1" minOccurs="0" name="S_PCI_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="PCI"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PCI_EYCDPR">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PCI_EYSPE1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PCI_EYSPE2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PCI_EYSPE3">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PCI_EYSPE4">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PCI_EYSPE5">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PCI_EYSPE6">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PCI_EYSPE7">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PCI_EYSPE8">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PCI_EYSPE9">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PCI_EYSP10">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PCI_EYCDST">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PCI_EYCDTI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PCI_EYCLQU">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_PCI_EYCLRE">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="GIN">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="GIN" maxOccurs="1" minOccurs="0" name="S_GIN_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="GIN"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_GIN_e7405">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_GIN_eC208_1_7402_1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_GIN_eC208_1_7402_2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_GIN_eC208_2_7402_1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_GIN_eC208_2_7402_2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_GIN_eC208_3_7402_1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_GIN_eC208_3_7402_2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_GIN_eC208_4_7402_1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_GIN_eC208_4_7402_2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_GIN_eC208_5_7402_1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_GIN_eC208_5_7402_2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="UNS">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="UNS" maxOccurs="1" minOccurs="0" name="S_UNS_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="UNS"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNS_EUDATI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="1"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="MOA2">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="MOA2" maxOccurs="1" minOccurs="0" name="S_MOA2_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="MOA2"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_MOA2_E_CDTI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_MOA2_E_VALO">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="18"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_MOA2_E_CDVA">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_MOA2_E_QUVA">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_MOA2_E_CDST">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="CNT">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="CNT" maxOccurs="1" minOccurs="0" name="S_CNT_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="CNT"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_CNT_ECQUCT">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_CNT_ECVACT">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="18"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_CNT_ECUNMI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="UNT">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="UNT" maxOccurs="1" minOccurs="0" name="S_UNT_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="UNT"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNT_e0074">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="6"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNT_e0062">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="14"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="UNZ">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="UNZ" maxOccurs="1" minOccurs="0" name="S_UNZ_tag">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+														<xsd:enumeration value="UNZ"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNZ_e0036">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="6"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_UNZ_e0020">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="14"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

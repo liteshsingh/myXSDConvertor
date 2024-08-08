@@ -1,0 +1,198 @@
+Record_Name,Field Business Name,"Field
+Length","Starting
+Position","Required/ Optional
+",Description
+PARTNER,PARTNER,X(8),1,R,Identify the Record ‘PARTNER’
+PARTNER,PARTNER,X(10),9,R,"Customer Code in A1 3PL
+Identify the PARTNER ID"
+PARTNER,ROUTE,X(8),1,R,Identify the Record ‘ROUTE’ 
+PARTNER,ROUTE,X(10),9,R,Customer Code in A1 3PL
+PARTNER,COMPANY,X(8),1,R,Identify the Record ‘COMPANY’
+PARTNER,COMPANY,X(2),9,R,Company Code in A1 3PL
+PARTNER,SET,X(3),1,R,Identify the Record ‘SET’
+PARTNER,SET,X(3),9,R,Transaction Set ID ‘943’
+PARTNER,BEGIN,X(8),1,R,Identify Record
+I943_1020_004010,Record ID,X(20),1,R,"Record ID
+‘I943_1020_004010’"
+I943_1020_004010,Record Type,X(4),21,R,"Record Type
+1020"
+I943_1020_004010,Reporting Code,X(1),25,R,"Reporting Code 
+‘F’"
+I943_1020_004010,Depositor Order Number,X(22),26,R,Customer Reference Number
+I943_1020_004010,Date,X(8),48,R,"Receipt Date 
+‘CCYYMMDD’"
+I943_1020_004010,Pro Bill Number,X(22),56,O,Pro Bill Number
+I943_1020_004010,Filler,X(8),78,O,Filler
+I943_1020_004010,Shipment ID number ,X(12),86,O,EDI Data
+I943_1020_004010,PO Reference Number ,X(22) ,98,O,Reference Number 1
+I943_1020_004010,Reference Number ,X(22) ,120,O,Reference Number 2
+I943_1020_004010,Reference Number ,X(8),142,O,EDI Data
+I943_1020_004010,Handling Code,X(3),150,O,Not used
+I943_1020_004010,Shipping Code ,X(2),153,O,Not used
+I943_1020_004010,Type Code,X(2),155,O,Not used
+I943_1020_004010,Action code ,X(2),157,O,"Action
+‘R’ – Replacement
+‘D’ – Deletion
+
+Default (blank) - Add"
+I943_1020_004010,Load Type Code,X(4),159,O,3PL Load Type
+I943_1020_004010,Warehouse Code,X(4),163,O,3PL Warehouse Code
+I943_1040_004010,Record ID,X(20),1,R,"Record ID
+‘I943_1040_004010’"
+I943_1040_004010,Record Type,X(4),21,R,"Record Type
+1040"
+I943_1040_004010,Identifier Code,X(3),25,R,"Organization ID Code:
+‘SF’ – Ship From"
+I943_1040_004010,Name,X(60),28,R,Shipper Name
+I943_1040_004010,ID Type,X(2),88,O,‘91’
+I943_1040_004010,Entity Code,X(80),90,O,Shipper External Number
+I943_1060_004010,Record ID,X(20),1,R,"Record ID
+‘I943_1060_004010’"
+I943_1060_004010,Record Type,X(4),21,R,"Record Type
+1060"
+I943_1060_004010,Address,X(55),25,O,Address 1
+I943_1060_004010,Address,X(55),80,O,Address 2
+I943_1060_004010,Record ID,X(20),1,R,"Record ID
+‘I943_1060_004010’"
+I943_1060_004010,Record Type,X(4),21,R,"Record Type
+1060"
+I943_1060_004010,Address,X(55),25,O,Address 3
+I943_1060_004010,Address,X(55),80,O,Address 4
+I943_1070_004010,Record ID,X(20),1,R,"Record ID
+‘I943_1070_004010’"
+I943_1070_004010,Record Type,X(4),21,R,"Record Type
+1070"
+I943_1070_004010,City,X(30),25,O,City Name
+I943_1070_004010,State,X(2),55,O,State Code
+I943_1070_004010,Postal/Zip,X(15),57,O,Postal Code
+I943_1070_004010,Country,X(3),72,O,Country Code
+I943_1070_004010,Location Qualifier,X(2),75,O,Filler
+I943_1070_004010,Location,X(30),77,,Filler
+I943_1070_004010,State Extended,X(4),107,O,State Code
+I943_1090_004010,Record ID,X(20),1,R,"Record ID
+‘I943_1090_004010’"
+I943_1090_004010,Record Type,X(4),21,R,"Record Type
+1090"
+I943_1090_004010,Qualifier,X(3),25,O,"Reference Qualifier
+Any Qualifiers are supported"
+I943_1090_004010,Reference ID,X(30),28,O,"Reference ID
+EDI Data"
+I943_1090_004010,Reference Description,X(45),58,O,"Reference Description
+EDI Data"
+I943_1110_004010,Record ID,X(20),1,R,"Record ID
+‘I943_1110_004010’"
+I943_1110_004010,Record Type,X(4),21,R,"Record Type
+1110"
+I943_1110_004010,Qualifier,X(2),25,R,"Date Qualifier:
+
+‘02’ – Expected Receipt Date;"
+I943_1110_004010,Date,X(8),27,R,Date – ‘CCYYMMDD’
+I943_1110_004010,Qualifier,X(2),35,O,"Qualifier
+Not Used"
+I943_1110_004010,Time,X(4),37,O,"Time
+Format HH24MI"
+I943_1110_004010,Filler,X(4),41,O,
+I943_1110_004010,Filler,(2),45,O,"Time Code
+Not used"
+I943_1120_004010,Record ID,X(20),1,O,"Record ID
+‘I943_1120_004010’"
+I943_1120_004010,Record Type,X(4),21,O,"Record Type
+1120"
+I943_1120_004010,Code,X(3),25,O,"Note Reference Code
+Any qualifiers are supported
+
+Below are examples of qualifiers
+‘BOL’ – Bill of lading Note
+‘TRA’ – Transportation
+‘WHI’ – Warehouse Instruction"
+I943_1120_004010,Remark,X(80),28,O,Free Form Description
+I940_1125_004010,Record ID,X(20),1,O,"Record ID
+‘I940_1125_004010’"
+I940_1125_004010,Record Type,X(4),21,O,"Record Type
+1125"
+I940_1125_004010,Receipt Carrier Flag,X(1),25,O,"Receipt Header Carrier Flag
+Values:
+‘N’,’E’,’C’,’B’"
+I940_1125_004010,Carry Unit Number,X(20),26,O,Carry Unit Number
+I940_1125_004010,Power Unit Number,X(20),46,O,Power Unit Number
+I940_1125_004010,Vessel,X(20),66,O,Vessel
+I940_1125_004010,Voyage,X(20),86,O,Voyage
+I943_1130_004010,Record ID,X(20),1,R,"Record ID
+‘I943_1130_004010’"
+I943_1130_004010,Record Type,X(4),21,R,"Record Type
+1130"
+I943_1130_004010,Transportation Method,X(2),25,R,"Transportation Method
+‘M’–Motor
+‘H’–Customer Pick Up
+‘U’–UPS Carrier"
+I943_1130_004010,SCAC,X(4),27,O,Standard Carrier Alpha Code
+I943_1130_004010,Route,X(35),31,O,Routing  - Carrier Name
+I943_1150_004010,Record ID,X(20),1,R,"Record ID
+‘I943_1150_004010’"
+I943_1150_004010,Record Type,X(4),21,R,"Record Type
+1150"
+I943_1150_004010,Unit Load Option Code,X(2),25,O,Not used
+I943_1150_004010,Quantity of Pallets,X(5),27,O,Not used
+I943_1150_004010,Pallet Exchange Code,X(1),32,O,Not used
+I943_1150_004010,Seal Number,X(15),33,O,Seal Number 1
+I943_1150_004010,Seal Number,X(15),48,O,Seal Number 2
+I943_2020_004010,Record ID,X(20),1,R,"Record ID
+‘I943_2020_004010’"
+I943_2020_004010,Record Type,X(4),21,R,"Record Type
+2020"
+I943_2020_004010,Quantity,R(12),25,R,Number of Units Shipped
+I943_2020_004010,SKU,X(2),37,R,Unit of Measure
+I943_2020_004010,UPC Code,X(12),39,O,UPC Code
+I943_2020_004010,Qualifier,X(2),51,R,‘VN’ – Vendor Product Code
+I943_2020_004010,Item Code,X(48),53,R,Product Code
+I943_2020_004010,Qualifier,X(2) ,101,O,‘LT’ Lot Code 
+I943_2020_004010,Inventory level  2,X(48),103,R,Lot Number 
+I943_2020_004010,Freight Class Code,X(5),151,O,Not used
+I943_2020_004010,Rate Class Code,X(3),156,O,Not used
+I943_2020_004010,Qualifier,X(1) ,159,O,‘Z’ – Mutually Defined
+I943_2020_004010,Hold code,X(30),160,O,Hold Code
+I943_2020_004010,Expiry Date,X(8),190,O,Expiry Date (format YYYYMMDD)
+I943_2020_004010,Condition Hold ,X(2),198,O,Not Used
+I943_2020_004010,Qualifier,X(2),200,O,‘PD’ Part Number Description
+I943_2020_004010,Inventory level  3,X(48),202,O,"Production Date 
+(Inventory Level 3)"
+I943_2030_004010,Record ID,X(20),1,R,"Record ID
+‘I943_2030_004010’"
+I943_2030_004010,Record Type,X(4),21,R,"Record Type
+2030"
+I943_2030_004010,Description,X(45),25,O,Item Description
+I943_2040_004010,Record ID,X(20),1,R,"Record ID
+‘I943_2040_004010’"
+I943_2040_004010,Record Type,X(4),21,R,"Record Type
+2040"
+I943_2040_004010,Qualifier,X(3),25,O,"Reference Qualifier
+‘LI’ – Line Number"
+I943_2040_004010,Reference ID,X(30),28,O,Customer Line Number
+I943_2040_004010,Reference Description,X(45),58,O,Inventory Level 4 
+I943_2040_004010,Date,X(8),103,O,Not Used
+I943_2040_004010,Time,X(8),111,O,Not Used
+I943_2040_004010,Time Code,X(2),119,O,Not Used
+I943_2040_004010,Reference Qualifier,X(3),121,O,Not Used
+I943_2040_004010,Reference 2,X(30),124,O,Catch Weight
+I943_2040_004010,Reference Qualifier,X(3),154,O,Not Used
+I943_2040_004010,Reference 3,X(50),157,O,Serial Number
+I943_2041_004010,Record ID,X(20),1,R,"Record ID
+‘I943_2041_004010’"
+I943_2041_004010,Record Type,X(4),21,R,"Record Type
+2041"
+I943_2041_004010,Attribute Name,X(20),25,O,Attribute Name
+I943_2041_004010,Attribute Value,X(40),45,O,Attribute Value
+I943_2050_004010,Record ID,X(20),1,R,"Record ID
+‘I943_2050_004010’"
+I943_2050_004010,Record Type,X(4),21,R,"Record Type
+2050"
+I943_2050_004010,Pack,X(8),25,O,Not Used
+I943_2050_004010,Size,X(10),33,O,Not Used
+I943_2050_004010,UOM,X(2),43,O,Not Used
+I943_2050_004010,Weight,X(12),45,O,Weight
+I943_2050_004010,Weight Qualifier,X(2),57,O,Weight Qualifier
+I943_2050_004010,Weight Unit Code,X(1),59,O,Weight Unit Code
+I943_3010_004010,Record ID,X(20),1,R,Record ID ‘I943_3010_004010’
+I943_3010_004010,Record Type,X(4),21,R,Record Type 3010
+I943_3010_004010,Total Quantity,R(10),25,O,Total Quantity Ordered
+END,END,X(3),1,R,END

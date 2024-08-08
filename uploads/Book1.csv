@@ -1,0 +1,221 @@
+Loop/Rec Name,Field Name,Description,Type,Dec,Format,Start,End,Length,min occ,max occ,Default Value,,Comments
+DOCUMENT,,,LS,,,,,,,,,,
+FILE HEADER,,,RC,,,,,,1..1,1..1,,,
+,RecordID (FH),,ID,,,1,,3,M,M,FH,,
+,TP Code,,AN ,,X        ,4,,15,M,M,,,
+,FileCreateDate (CCYYMMDD),,DT,,YYYYMMDD ,19,,8,M,M,,,The date in the transaction.
+,FileCreateTime (HHMM),,TM,,HHMMSS   ,27,,6,M,M,,,The time in the transaction.
+,ISA Control Num,,N,,N0       ,33,,9,M,M,,,
+,GS Control Num,,N,,N0       ,42,,9,M,M,,,
+Shipment Record1,,,RC,,,,,,1..1,1..1,,,Mapped from HL_S Loop
+,RecordID (SM1),,ID,,,1,,3,M,M,,,
+,Vessel,,AN,,X        ,4,,28,O,O,,,
+,Voyage,,AN,,X        ,32,,10,O,O,,,
+,Arrival Port,,AN,,X        ,42,,30,M,M,,,
+,Lloyds Vessel #,,AN,,X        ,72,,8,U,U,,,
+,Port of Origin,,AN,,X        ,80,,30,M,M,,,
+,Country of Origin,,AN,,X        ,110,,30,U,U,,,
+,Transportation Method Type Code,,AN,,X        ,140,,2,M,M,,,
+Shipment Record2,,,RC,,,,,,1..1,1..1,,,Mapped from HL_S Loop
+,RecordID (SM2),,ID,,,1,,3,M,M,,,
+,ETA Discharge Port,,AN ,,X       ,4,,8,U,U,,,
+,ETD Origin,,DT,,YYYYMMDD,12,,8,M,M,,,CCYYMMDD
+,ETA Final Destination,,DT,,YYYYMMDD,20,,8,M,M,,,CCYYMMDD
+,ETA Yard Date,,DT,,YYYYMMDD,28,,8,U,U,,,
+,Last Free Day,,DT,,YYYYMMDD,36,,8,U,U,,,
+Shipment Record3,,,RC,,,,,,1..1,1..1,,,
+,RecordID (SM3),,ID,,,1,,3,M,M,,,
+,Container Prefix/Initial,,AN,,X,4,,4,M,M,,,Mapped from HL_E Loop
+,Container Number,,AN,,X,8,,10,M,M,,,Mapped from HL_E Loop
+,Container Type/ISO Code,,AN,,X,18,,10,M,M,,,Mapped from HL_E Loop
+,Seal Number,,AN,,X,28,,15,O,O,,,Mapped from HL_E Loop
+,Master OBL,,AN,,X,43,,30,M O,M O,,,Mapped from HL_S Loop
+,Container Stuffing Number,,AN,,X,73,,30,M,M,,,
+,Transaction Set Purpose Code,,AN,,X,103,,2,M,M,,,
+,Seal Number2,,AN,,X,105,,15,U,U,,,
+,reference1,,AN,,X,120,,30,M,M,,,Mapped from HL_S Loop
+,reference2,,AN,,X,150,,30,U,U,,,
+Shipment Optional Record1,,,RC,,,,,,1..1,1..1,,,Mapped from HL_S Loop
+,RecordID (SO1),,ID,,,1,,3,M,M,,,
+,Container Weight,,N,,R2,4,,10,U,U,,,
+,Container Weight UOM,,AN,,X ,14,,2,U,U,,,
+,Container Volume,,N,,R2,16,,10,U,U,,,
+,Container Volume UOM,,AN,,X ,26,,2,U,U,,,
+,Container Quantity,,N,,N0,28,,10,U,U,,,
+,Container Quantity UOM,,AN,,X ,38,,2,U,U,,,
+,Container Pieces Quantity,,N,,N0,40,,10,M,M,,,
+,Container Pieces Quantity UOM,,AN,,X ,50,,2,M,M,,,First two characters
+,Contract Number,,AN,,X ,52,,30,U,U,,,
+,Department Number,,AN,,X ,82,,30,U,U,,,
+Shipment Reference Record1,,,RC,,,,,,1..1,1..1,,,Mapped from HL_S Loop
+,RecordID (SR1),,ID,,,1,,3,M,M,,,
+,Carrier Code,,AN,,X,4,,17,M,M,,,
+,Carrier Name,,AN,,X,21,,35,M,M,,,
+,Carrier Address 1,,AN,,X,56,,35,U,U,,,
+,Carrier Address 2,,AN,,X,91,,35,U,U,,,
+,City,,AN,,X,126,,35,U,U,,,
+,State,,AN,,X,161,,2,U,U,,,
+,Zip,,AN,,X,163,,15,U,U,,,
+,Country,,AN,,X,178,,15,U,U,,,
+Group GROUP_OM,,,LS,,,,,,0..999999,0..999999,,,Populate per PRF
+Order Record1,,,RC,,,,,,0..1,0..1,,,
+,RecordID (OM1),,ID,,,1,,3,M,M,,,
+,PO Number,,AN ,,X       ,4,,22,M,M,,,Mapped from HL_O Loop
+,PO Type Code,,AN ,,X       ,26,,2,M,M,,,Mapped from HL_O Loop
+,Bill of lading Number,,AN ,,X       ,28,,30,U O,U O,,,Mapped from HL_O Loop
+,OBL SCAC,,AN ,,X       ,58,,4,M,M,,,
+,Release Number,,AN ,,X       ,62,,30,M,M,,,Mapped from HL_O Loop
+,PO Volume,,AN ,,X       ,92,,10,M,M,,,Mapped from HL_O Loop/Fill with leading zeroes/Format:R6
+,PO Volume UOM,,AN ,,X       ,102,,2,M,M,,,Mapped from HL_O Loop
+,PO Weight,,AN ,,X       ,104,,10,M,M,,,Mapped from HL_O Loop/Format: R5
+,PO Weight UOM,,AN ,,X       ,114,,2,M,M,,,Mapped from HL_O Loop
+,PO Total Cartons,,N,,N0      ,116,,10,M,M,,,Mapped from HL_O Loop
+,PO Total Pieces,,N,,N0      ,126,,10,O,O,,,Mapped from HL_O Loop
+,Purchase Category,,AN ,,X       ,136,,30,M,M,,,Mapped from HL_O Loop
+,PO Date,,DT,,YYYYMMDD,166,,8,U,U,,,
+,PRO/Invoice,,AN ,,X       ,174,,50,O,O,,,Mapped from HL_O Loop
+,Contact Reference,,AN ,,X       ,224,,50,O,O,,,Mapped from HL_O Loop
+,Shipper's Identifier,,AN ,,X       ,274,,50,O,O,,,Mapped from HL_O Loop
+,NewOceanBOL,,AN,,X       ,324,,64,O,O,,,Mapped from HL_O Loop
+Order Optional Record1,,,RC,,,,,,0..1,0..1,,,
+,RecordID (OO1),,ID,,,1,,3,U,U,,,
+,PO Port Destination,,AN ,,,4,,60,U,U,,,
+,PO Port Origin,,AN ,,,64,,30,U,U,,,
+,PO Final Destination Code,,AN ,,,94,,80,U,U,,,
+,PO Final Destination Name,,AN ,,,174,,60,U,U,,,
+,PO Port Destination Name,,AN ,,,234,,60,U,U,,,
+Order Optional Record2,,,RC,,,,,,0..1,0..1,,,"Map from current HL_O Loop. If current HL_O Loop has no DTM_1 occurrence, do not map this record"
+,RecordID (OO2),,ID,,,1,,3,M,M,,,
+,PO Date,,DT,,YYYYMMDD,4,,8,U,U,,,
+,Merchandise Due Date (Ship not before),,DT,,YYYYMMDD,12,,8,O,O,,,Mapped from HL_O Loop
+,Delivery Date (Ship not after Date),,DT,,YYYYMMDD,20,,8,O,O,,,Mapped from HL_O Loop
+Order Reference Record1,,,RC,,,,,,1..1,1..1,,,Mapped from HL_O Loop
+,RecordID (OR1),,ID,,,1,,3,M,M,,,
+,Supplier Code,,AN,,X,4,,17,M,M,,,
+,Supplier Name,,AN,,X,21,,35,M,M,,,
+,Supplier Address 1,,AN,,X,56,,35,M,M,,,
+,Supplier Address 2,,AN,,X,91,,35,O,O,,,
+,City,,AN,,X,126,,35,M,M,,,
+,State,,AN,,X,161,,2,M,M,,,
+,Zip,,AN,,X,163,,15,M,M,,,
+,Country,,AN,,X,178,,15,U,U,,,
+Order Reference Record2,,,RC,,,,,,0..1,0..1,,,
+,RecordID (OR2),,ID,,,1,,3,O,O,,,
+,Consignee Code,,AN,,X,4,,17,O,O,,,
+,Consignee Name,,AN,,X,21,,35,O,O,,,
+,Consignee Address 1,,AN,,X,56,,35,O,O,,,
+,Consignee Address 2,,AN,,X,91,,35,O,O,,,
+,City,,AN,,X,126,,35,O,O,,,
+,State,,AN,,X,161,,2,O,O,,,
+,Zip,,AN,,X,163,,15,O,O,,,
+,Country,,AN,,X,178,,15,U,U,,,
+,Relative DC Code,,AN,,X,193,,16,U,U,,,
+Order Reference Record3,,,RC,,,,,,0..1,0..1,,,
+,RecordID (OR3),,ID,,,1,,3,M,M,,,
+,Buyer's Code,,AN,,X,4,,80,O,O,,,
+,Load Sequence Number,,AN,,X,84,,30,O,O,,,
+,PO Status,,AN,,X,114,,8,O,O,,,
+,Department Number,,AN,,X,122,,40,O,O,,,
+,PO Description,,AN,,X,162,,40,O,O,,,
+,PO Ref 1,,AN,,X,202,,40,O,O,,,
+,PO Ref 2,,AN,,X,242,,40,O,O,,,
+Item Record1,,,RC,,,,,,0..1,0..1,,,
+,RecordID (IM1),,ID,,,1,,3,M,M,,,
+,PO Style Number,,AN ,,X ,4,,48,M,M,,,
+,PO Style Shipped Qty,,N,,N0,52,,15,O,O,,,
+,PO Style Shipped Qty UOM,,AN ,,X ,67,,2,O,O,,,
+,Unit Price,,N,,R2,69,,14,O,O,,,
+,Basis of Unit Price Code,,N,,N0,83,,2,O,O,,,
+,Inside Stow,,N,,N0,85,,30,O,O,,,
+,Ship Order Sequence,,N,,N0,115,,30,O,O,,,
+Item Record 2,,,RC,,,,,,0..1,0..1,,,
+,RecordID (IM2),,ID,,,1,,3,M,M,,,
+,PO Style Weight,,N,,R2,4,,10,O,O,,,
+,PO Style Weight UOM,,AN ,,X ,14,,2,O,O,,,
+,PO Style Volume,,N,,R2,16,,10,O,O,,,
+,PO Style Volume UOM,,AN ,,X ,26,,2,O,O,,,
+,PO Style Total Shipped Units,,N,,N0,28,,10,M,M,,,
+,PO Style Total Shipped Units UOM,,AN ,,X ,38,,2,M,M,,,
+,PO Style Total No. of Packages,,N,,N0,40,,10,M,M,,,
+,PO Style Total No. of Packages UOM,,AN ,,X ,50,,2,O,O,,,
+Item Optional Record1,,,RC,,,,,,0..1,0..1,,,
+,RecordID (IO1),,ID,,,1,,3,M,M,,,
+,Product Description,,AN ,,X       ,4,,80,O,O,,,
+,Merchandise Due Date,,DT,,YYYYMMDD,84,,8,O,O,,,
+,Packaging Description Code,,AN ,,X       ,92,,7,O,O,,,
+Item Reference Record1,,,RC,,,,,,0..1,0..1,,,
+,RecordID (IR1),,ID,,,1,,3,M,M,,,
+,Product Spec Level Value 1,,AN ,,X       ,4,,30,O,O,,,
+,Product Spec Level Value 2,,AN ,,X       ,34,,30,O,O,,,
+,Product Spec Level Value 3,,AN ,,X       ,64,,30,O,O,,,
+,Product Spec Level Value 4,,AN ,,X       ,94,,30,O,O,,,
+,Length,,AN ,,X       ,124,,8,O,O,,,
+,Width,,AN ,,X       ,132,,8,O,O,,,
+,Height,,AN ,,X       ,140,,8,O,O,,,
+,HeightUOM,,AN ,,X       ,148,,2,O,O,,,
+Item Reference Record2,,,RC,,,,,,0..1,0..1,,,
+,RecordID (IR2),,ID,,,1,,3,M,M,,,
+,Ship Order Number,,AN ,,X ,4,,30,O,O,,,
+,Currency Code,,AN ,,X ,34,,3,O,O,,,
+,Allowance or Charge Indicator,,AN ,,X ,37,,1,O,O,,,
+,"Service, Promotion, Allowance or Charge Code",,AN ,,X ,38,,4,O,O,,, 
+,Amount,,N,,R2,42,,14,O,O,,,
+GROUP_PO,,,LS,,,,,,0..999999,0..999999,,,Populate per HL_P
+Pack Record1,,,RC,,,,,,0..1,0..1,,,
+,RecordID (PO1),,ID,,,1,,3,M,M,,,
+,CartonID From,,AN,,X ,4,,48,O,O,,,
+,CartonID To,,N,,N0,52,,48,O,O,,,
+,Carton Quantity,,N,,N0,100,,45,M,M,,, 
+,Carton Indicator,,AN,,X ,145,,20,O,O,,,
+,Final DC,,AN,,X ,165,,20,M,M,,,
+,Final DC PO,,AN,,X ,185,,20,M,M,,,
+,Pack Volume,,N,,R4,205,,10,M,M,,,
+,Pack Volume UOM,,AN,,X ,215,,2,M,M,,,
+,Pack Weight,,AN,,,217,,10,M,M,,,
+,Pack Weight UOM,,AN,,X ,227,,2,M,M,,,
+,Pack Type,,AN,,X ,229,,20,O,O,,,
+Pack Record2,,,RC,,,,,,0..1,0..1,,,
+,RecordID (PO2),,ID,,,1,,3,M,M,,,
+,Length,,N,,R6,4,,10,O,O,,,
+,Width,,N,,R6,14,,10,O,O,,,
+,Height,,N,,R6,24,,10,O,O,,,
+,Dimension Qualifier,,AN,,X,34,,2,O,O,,,
+END GROUP_PO,,,LE,,,,,,,,,,
+END_GROUP_OM,,,LE,,,,,,,,,,
+GROUP_MI ,,,LS,,,,,,0..999999,0..999999,,,
+Master Item Record 1,,,RC,,,,,,0..1,0..1,,,Populate per HL_I/LIN
+,RecordID (MI1),,ID,,,1,,3,M,M,,,
+,Style Number - SKU Number,,AN,,X ,4,,48,M,M,,,
+,Style Number Qualifier,,AN,,X ,52,,2,M,M,,,
+,Shipped Qty,,AN,,X ,54,,15,M,M,,,Format: N6/Fill with leading zeroes
+,Shipped Qty UOM,,AN,,X ,69,,2,M,M,,,
+,UPC,,AN,,X ,71,,48,M,M,,,
+,Group Qualifier,,AN,,X ,119,,2,M,M,,,
+,Group Number,,AN,,X ,121,,2 3,M,M,,,
+,Line Number,,AN,,X ,123 124,,20,O,O,,,
+,Product/Service ID Qualifier,,AN,,X ,144,,2,O,O,,,
+,Customer Item Number,,AN,,X ,146,,48,O,O,,,
+SubItem Record1,,,RC,,,,,,0..999999,0..999999,,,Populate per HL_I/SLN 
+,RecordID (UO1),,ID,,,1,,3,M,M,,,
+,Inner Carton Quantity,,N,,N0      ,4,,15,M,M,,,
+,Inner Carton Quantity UOM,,AN ,,X       ,19,,2,M,M,,,
+,UPC dummy field - SKU,,AN ,,X       ,21,,34,M,M,,,Where SLN09 = ZZ
+,UPC Number,,AN ,,X       ,55,,14,M,M,,,Where SLN11 = UP
+,Size Code,,AN ,,X       ,69,,30,U,U,,,
+,Printable Size Code,,AN ,,X       ,99,,30,U,U,,,
+,Width,,AN ,,X       ,129,,2,U,U,,,
+,Color,,AN ,,X       ,131,,20,U,U,,,
+,Assignment ID,,AN ,,X       ,151,,20,O,O,,,
+,Date Shipped,,DT,,YYYYMMDD,171,,8,U,U,,,
+,Estimated Delivery,,DT,,YYYYMMDD,179,,8,U,U,,,
+,FCR,,DT,,YYYYMMDD,187,,8,U,U,,,
+,Country Code,,AN ,,X ,195,,40,U,U,,,
+END GROUP_MI,,,LE,,,,,,,,,,
+FILE TRAILER,,,RC,,,,,,1..1,1..1,,,
+,RecordID (FT),,ID,,,1,,3,M,M,,,
+,TP Code,,AN ,,X       ,4,,15,M,M,,,
+,FileCreateDate (CCYYMMDD),,DT,,YYYYMMDD,19,,8,M,M,,,The date in the transaction.
+,FileCreateTime (HHMM),,TM,,HHMM    ,27,,4,M,M,,,The time in the transaction.
+,ISA Control Num,,N,,N0      ,31,,9,M,M,,,
+,GS Control Num,,N,,N0      ,40,,9,M,M,,,
+END_DOCUMENT,,,LE,,,,,,,,,,

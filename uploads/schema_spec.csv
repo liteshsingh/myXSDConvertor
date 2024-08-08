@@ -1,0 +1,84 @@
+Loop/Rec Name,Field Name,Type,Dec,Format,Start,End,min occ,Length,max occ,Occ,Default Value,Comments,Source/Value,Comments
+DocumentLoop,,LS,,,,,1 .. *,,1 .. *,1 .. *,,LOOP START - DocumentLoop,,LOOP START - DocumentLoop
+FILE_HEADER_RECORD,,RC,,,,,1 .. 1,,1 .. 1,1 .. 1,,,,
+,H1,AN,,,1,15,M,15..15,M,M,"""###HEADER######""",,same mapping,
+,H2,AN,,,16,30,M,15..15,M,M,ISA_06,,same mapping,
+,H3,AN,,,31,45,M,15..15,M,M,ISA_08,,same mapping,
+,H4,AN,,,46,60,M,15..15,M,M,GS_02,,same mapping,
+,H5,AN,,,61,75,M,15..15,M,M,GS_03,,same mapping,
+,H6,AN,,,76,90,M,15..15,M,M,ST_01,,same mapping,
+,H7,AN,,,91,105,M,15..15,M,M,GS_08,,same mapping,
+HDR1_RECORD,,RC,,,,,1 .. 1,,1 .. 1,1 .. 1,,,,
+,D1,AN,,,1,7,M,7..7,M,M,"""Date:  """,WHEN data found in GS_03,same mapping,same notes
+,D2,AN,,,8,22,M,15..15,M,M,,WHEN data found in GS_03  MAP system date TO D2 format is mm/dd/yyyy,,same notes
+,D3,AN,,,23,29,M,7..7,M,M,,WHEN data found in GS_03  MAP system time TO D3,,same notes
+,D4,AN,,,30,64,M,35..35,M,M,"""  TARGET  P.O. CHANGE REQUEST      """,WHEN data found in GS_03,"""CANADIAN TIRE P.O. CHANGE REQUEST"" IF (ISA_06 == ""201613668"") 
+ELSE ""REINHART P.O. CHANGE REQUEST""  IF ((ISA_06 == ""REINHARTFOODSER"") || (ISA_06 ==  ""TST1REINHARTFOO""))
+ELSE ""  TARGET  P.O. CHANGE REQUEST      ""","same notes
+See Change Control 4/4/13, 4/25/17, 5/2, 6/21/17"
+Filler1_RECORD,,RC,,,,,1 .. 1,,1 .. 1,1 .. 1,,,,
+,D6,AN,,,1,70,M,70..70,M,M,"""                                                                      """,WHEN data found in GS_03,same mapping,same notes
+PO1_RECORD,,RC,,,,,1 .. 1,,1 .. 1,1 .. 1,,,,
+,D8,AN,,,1,70,M,70..70,M,M,"STRCAT(""PO Number:            "",BCH_03) if BCH_03 exists",,same mapping,
+PO2_RECORD,,RC,,,,,1 .. 1,,1 .. 1,1 .. 1,,,,
+,D10,AN,,,1,22,M,22..22,M,M,"""PO Date:              "" if BCH_03 exists",,"""PO Date:              "" if BCH_03 exists && (ISA_06 != ""REINHARTFOODSER"" && ISA_06 != ""TST1REINHARTFOO"")",See Change Control 3/14/2020
+,D11,AN,,,23,70,M,48..48,M,M,BCH_06 if BCH_03 exists,format is mm/dd/yyyy,"BCH_06 if BCH_03 exists && (ISA_06 != ""REINHARTFOODSER"" && ISA_06 != ""TST1REINHARTFOO"")","same notes
+See Change Control 3/14/2020"
+PO3_RECORD,,RC,,,,,1 .. 1,,1 .. 1,1 .. 1,,,,
+,D13,AN,,,1,22,M,22..22,M,M,"""PO Change Date:       "" if BCH_03 exists",,same mapping,
+,D14,AN,,,23,70,M,48..48,M,M,BCH_11 if BCH_03 exists,format is mm/dd/yyyy,"BCH_06 IF ((ISA_06 == ""REINHARTFOODSER"") || (ISA_06 == ""TST1REINHARTFOO"")) 
+ELSE BCH_11 if BCH_03 exists","same notes
+See Change Control 3/14/2020"
+PO4_RECORD,,RC,,,,,1 .. 1,,1 .. 1,1 .. 1,,,,
+,D15A,AN,,,1,22,M,22..22,M,M,,,,See Change Control 1/14/20
+,D15B,AN,,,23,70,M,48..48,M,M,,,,"format is mm/dd/yyyy
+
+See Change Control 1/14/20"
+PO5_RECORD,,RC,,,,,1 .. 1,,1 .. 1,1 .. 1,,,,
+,D15C,AN,,,1,22,M,22..22,M,M,,,"""Pick up Date: "" ",See Change Control 1/14/20
+,D15D,AN,,,23,70,M,48..48,M,M,,,,"format is mm/dd/yyyy
+
+See Change Control 1/14/20"
+PO6_RECORD,,RC,,,,,1 .. 1,,1 .. 1,1 .. 1,,,,
+,D15E,AN,,,1,22,M,22..22,M,M,,,"""Incoterms: "" ",See Change Control 1/14/20
+,D15F,AN,,,23,70,M,48..48,M,M,,,,"
+See Change Control 1/14/20"
+,,,,,,,,,,,,,,
+Filler2_RECORD,,RC,,,,,1 .. 1,,1 .. 1,1 .. 1,,,,
+,D16,AN,,,1,70,M,70..70,M,M,"""                                                                      "" if BCH_03 exists",,same mapping,
+CUST_RECORD,,RC,,,,,1 .. 1,,1 .. 1,1 .. 1,,,,
+,D18,AN,,,1,70,M,70..70,M,M,"STRCAT(""Customer : "",N1_02,""    "",N1_04) if N1_01 = ""ST""",,same mapping,
+ADDR1_RECORD,,RC,,,,,0 .. 1,,0 .. 1,0 .. 1,,,,See Change Control 1/14//20
+,D19a,AN,,,1,70,M,70..70,M,M,,,,See Change Control 1/14/20
+ADDR2_RECORD,,RC,,,,,0 .. 1,,0 .. 1,0 .. 1,,,,See Change Control 1/14//20
+,D19b,AN,,,1,70,M,70..70,M,M,,,,See Change Control 1/14/20
+Filler3_RECORD,,RC,,,,,1 .. 1,,1 .. 1,1 .. 1,,,,
+,D20,AN,,,1,70,M,70..70,M,M,"""                                                                      """,,same mapping,
+TITLE_RECORD,,RC,,,,,1 .. 1,,1 .. 1,1 .. 1,,,,
+,D22,AN,,,1,16,M,16..16,M,M,"""ACTION         """,,same mapping,
+,D23,AN,,,17,26,M,10..10,M,M,"""Order QTY """,,same mapping,
+,D24,AN,,,27,36,M,10..10,M,M,"""New QTY   """,,same mapping,
+,D25,AN,,,37,43,M,7..7,M,M,"""Price  """,,same mapping,
+,D26,AN,,,44,63,M,20..20,M,M,"""SKU         """,,same mapping,See Change Control 3/12/13
+,D27,AN,,,64,76,M,13..13,M,M,"""Material #  """,,same mapping,See Change Control 3/12/13
+,D28,AN,,,77,91,M,15..15,M,M,"""UPC           """,,same mapping,See Change Control 3/12/13
+,D29,AN,,,92,98,M,20..20,M,M,,,"""Line Identification""",See Change Control 3/12/13
+Filler4_RECORD,,RC,,,,,1 .. 1,,1 .. 1,1 .. 1,,,,
+,D30,AN,,,1,70,M,70..70,M,M,""" "" if TD5_01 exists ",,same mapping,
+Filler4:2_RECORD,,RC,,,,,1 .. 1,,1 .. 1,1 .. 1,,,,
+,D30:2,AN,,,1,70,M,70..70,M,M,,,,
+DATA_RECORD,,RC,,,,,0 .. *,,0 .. *,0 .. *,,,,
+,D32,AN,,,1,16,M,16..16,M,M,if POC_02 exists,use xref CADB_MSSI_ELE670; input:POC_02:SENDER_ITEM output: TEXT1,same mapping,same notes
+,D33,AN,,,17,26,M,10..10,M,M,POC_03 if POC_02 exists,,same mapping,
+,D34,AN,,,27,36,M,10..10,M,M,POC_04 if POC_02 exists,,same mapping,
+,D35,AN,,,37,43,M,7..7,M,M,"STRCAT(""$"",POC_06) if POC_02 exists",add 0 if value is .xx sample: input .66 output $0.66,same mapping,same notes
+,D36,AN,,,44,63,M,20..20,M,M,POC_09  if POC_02 exists,,same mapping,See Change Control 3/12/13
+,D37,AN,,,64,76,M,13..13,M,M,POC_11 if POC_02 exists,,"POC_11 IF (ISA_06 == ""201613668""  || ISA_06 == ""TST1REINHARTFOO"" || ISA_06 == ""REINHARTFOODSER"") 
+ELSE POC_13 IF POC_02 exists","See Change Control 3/12/13, 4/30, 6/21/17"
+,D38,AN,,,77,91,M,15..15,M,M,POC_13 if POC_02 exists,,"POC_13 IF (ISA_06 == ""201613668"" || ISA_06 == ""TST1REINHARTFOO"" || ISA_06 == ""REINHARTFOODSER"" ) 
+ELSE POC_11 IF POC_02 exists","See Change Control 3/12/13, 4/30, 6/21/17"
+,D39,AN,,,92,98,M,20..20,M,M,,,POC_01 IFPOC_02 exists,See Change Control 3/12/13
+Filler5_RECORD,,RC,,,,,1 .. 1,,1 .. 1,1 .. 1,,,,
+,D40,AN,,,1,80,M,80..80,M,M,"""--------------------------------------------------------------------------------"" if POC_02 exists",,same mapping,
+TTL_RECORD,,RC,,,,,1 .. 1,,1 .. 1,1 .. 1,,,,
+,D42,AN,,,1,70,M,70..70,M,M,"STRCAT(""Number of Items Changed:    "",CTT_01) if CTT_01 exists",,same mapping,

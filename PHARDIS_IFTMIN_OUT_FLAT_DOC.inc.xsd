@@ -1,0 +1,401 @@
+<?xml version="1.0" ?>
+<xsd:schema xmlns="http://www.seeburger.com/Project_Name/Schema_Name" xmlns:bic="http://www.seeburger.com/bicng/lang/schema/" xmlns:inhouse="http://www.seeburger.com/bicng/lang/schema/inhouse" xmlns:xsd="http://www.w3.org/2001/XMLSchema" bic:messageType="INHOUSE" elementFormDefault="qualified" targetNamespace="http://www.seeburger.com/Project_Name/Schema_Name">
+	<xsd:import namespace="http://www.seeburger.com/bicng/lang/schema/inhouse" schemaLocation="platform:/plugin/com.seeburger.bicng.lang.schema.facade.inhouse/resources/inhouse.xsd"/>
+	<xsd:element name="Schema_Name">
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="inhouse:InhouseMessageRoot">
+					<xsd:sequence>
+						<xsd:element maxOccurs="1" minOccurs="0" name="IFT1">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="IFT1" maxOccurs="1" minOccurs="0" name="S_IFT1_TVINDE">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="30"/>
+														<xsd:enumeration value="IFT1"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVNUBA">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="15"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVDABA">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="8"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVORSP">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="15"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVMITT">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="30"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVINMT">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="30"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVCAPM">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="5"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVLOCM">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="30"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVPRVM">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="4"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVNAZM">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="30"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVDEST">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="30"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVINDI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="30"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVCAPD">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="10"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVLOCD">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="30"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVPRVD">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="4"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVNAZD">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="30"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVPESO">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="15"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVVOLU">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="15"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVVALU">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="30"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVIMPO">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="18"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVCOLL">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="9"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVNRC1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="9"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVNRC2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="9"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVNOTE">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="80"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVVE01">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="6"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVNUDI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="10"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVDTDI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="8"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVCPAG">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVCPIA">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="1"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVTELF">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="20"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVDTC1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="8"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVDTC2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="8"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVNOT1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="65"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVNOT2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="65"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVNOT3">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="65"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVNOT4">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="65"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVNOT5">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="65"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVACTY">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="1"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVTRAS">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="1"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVTITR">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="1"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVRGBO">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="10"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVRIDI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVCAPD2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="15"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVCOMT">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="10"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVCODE">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="10"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVNOTT">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="100"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVNOTZ">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="100"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVDES2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVCOM1">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="70"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVCOM2">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="70"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVCOM3">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="70"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVCOM4">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="70"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_IFT1_TVCOM5">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="70"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

@@ -1,0 +1,253 @@
+Record_Name,Field Business Name,"Field
+Length","Starting
+Position","Required/ Optional
+",Description
+PARTNER,PARTNER,X(8),1,R,Identify the Record ‘PARTNER’
+PARTNER,PARTNER,X(10),9,R,"Customer Code in 3PL
+Identify the PARTNER ID"
+PARTNER,ROUTE,X(8),1,R,Identify the Record ‘ROUTE’ 
+PARTNER,ROUTE,X(10),9,R,Customer Code in 3PL
+PARTNER,COMPANY,X(8),1,R,Identify the Record ‘COMPANY’
+PARTNER,COMPANY,X(2),9,R,Company Code in 3PL
+PARTNER,SET,X(3),1,R,Identify the Record ‘SET’
+PARTNER,SET,X(3),9,R,Transaction Set ID ‘940’
+PARTNER,BEGIN,X(8),1,R,Identify Record
+I940_1020_004010,Record ID,X(20),1,R,"Record ID
+‘I940_1020_004010’"
+I940_1020_004010,Record Type,X(4),21,R,"Record Type
+1020"
+I940_1020_004010,Order  Status,X(1),25,R,"Order Status Code
+N – Original
+R – Change
+D – Deletion"
+I940_1020_004010,Order Number,X(22),26,R,Depositor Order Number
+I940_1020_004010,PO Number,X(22),48,O,Purchase Order Number
+I940_1020_004010,Link Sequence Number,X(8),70,O,Alternate Reference 2
+I940_1020_004010,Master Link Number,X(22),78,O,"Alternate Reference 1
+"
+I940_1020_004010,Transaction Type Code,X(2),100,O,Not used
+I940_1020_004010,Action Code,X(2),102,O,Not used
+I940_1020_004010,Parcel Carrier Account Number,X(20),104,O,Parcel Carrier Account Number
+I940_1020_004010,Warehouse Code,X(4),124,O,Warehouse Code
+I940_1020_004010,External Load Number,X(20),128,O,"External Load Number
+"
+I940_1020_004010,Reference Number ,X(20),148,O,EDI Reference Number
+I940_1040_004010,Record ID,X(20),1,R,"
+Record ID
+‘I940_1040_004010’"
+I940_1040_004010,Record Type,X(4),21,R,"Record Type
+1040"
+I940_1040_004010,Identifier Code,X(3),25,R,"Organization ID Code:
+‘ST’ – Ship To"
+I940_1040_004010,Name,X(60),28,R,Entity Name
+I940_1040_004010,ID Type,X(2),88,O,ID Type
+I940_1040_004010,Entity Code,X(80),90,O,"Consignee Code
+Consignee External Reference"
+I940_1060_004010,Record ID,X(20),1,R,"Record ID
+‘I940_1060_004010’"
+I940_1060_004010,Record Type,X(4),21,R,"Record Type
+1060"
+I940_1060_004010,Address,X(55),25,O,Address 1
+I940_1060_004010,Address,X(55),80,O,Address 2
+I940_1060_004010,Record ID,X(20),1,R,"Record ID
+‘I940_1060_004010’"
+I940_1060_004010,Record Type,X(4),21,R,"Record Type
+1060"
+I940_1060_004010,Address,X(55),25,O,Address 3
+I940_1060_004010,Address,X(55),80,O,Address 4
+I940_1070_004010,Record ID,X(20),1,R,"Record ID
+‘I940_1070_004010’"
+I940_1070_004010,Record Type,X(4),21,R,"Record Type
+1070"
+I940_1070_004010,City,X(30),25,O,City Name
+I940_1070_004010,State,X(2),55,O,State Code
+I940_1070_004010,Postal/Zip,X(15),57,O,Postal Code
+I940_1070_004010,Country,X(3),72,O,Country Code
+I940_1070_004010,Location Qualifier,X(2),75,O,Filler
+I940_1070_004010,Location,X(30),77,,Filler
+I940_1070_004010,State Extended,X(4),107,O,State Code
+I940_1090_004010,Record ID,X(20),1,R,"Record ID
+‘I940_1090_004010’"
+I940_1090_004010,Record Type,X(4),21,R,"Record Type
+1090"
+I940_1090_004010,Qualifier,X(3),25,O,"Reference Qualifier
+Any qualifiers are supported"
+I940_1090_004010,Reference ID,X(30),28,O,"Reference ID
+EDI Header Data Block"
+I940_1090_004010,Reference Description,X(45),58,O,"Reference Description
+EDI Header Data Block"
+I940_1090_004010,Date ,X(8) ,103,O,EDI Header Data Block
+I940_1110_004010,Record ID,X(20),1,R,"Record ID
+‘I940_1110_004010’"
+I940_1110_004010,Record Type,X(4),21,R,"Record Type
+1110"
+I940_1110_004010,Qualifier,X(2),25,R,"Date Qualifier:
+‘10’ – Ship Date;
+‘52’ – Order Date;
+‘68’ – Requested Delivery Date."
+I940_1110_004010,Date,X(8),27,R,Date – ‘CCYYMMDD’
+I940_1110_004010,Qualifier,X(2),35,O,"Qualifier
+Not Used"
+I940_1110_004010,Time,X(4),37,O,"Time
+Format HH24MI"
+I940_1110_004010,Filler,X(4),41,O,
+I940_1110_004010,Filler,(2),45,O,"Time Code
+Not used"
+I940_1120_004010,Record ID,X(20),1,O,"Record ID
+‘I940_1120_004010’"
+I940_1120_004010,Record Type,X(4),21,O,"Record Type
+1120"
+I940_1120_004010,Code,X(3),25,O,"Note Reference Code
+Any qualifiers are supported
+
+Below are examples:
+‘’ – Delivery;
+‘GEN’ – Entire Transaction Set;
+‘BOL’ – Bill of lading Note;
+‘TRA’ – Transportation;
+‘WHI’ – Warehouse Instruction.
+‘SPH’-Special Handling"
+I940_1120_004010,Remark,X(80),28,O,Free Form Description
+I940_1125_004010,Record ID,X(20),1,O,"Record ID
+‘I940_1125_004010’"
+I940_1125_004010,Record Type,X(4),21,O,"Record Type
+1125"
+I940_1125_004010,Order Carrier Flag,X(1),25,O,"Order Header Carrier Flag
+Values : ‘N’,’E’,’C’,’B’"
+I940_1125_004010,Carry Unit Number,X(20),26,O,Carry Unit Number
+I940_1125_004010,Power Unit Number,X(20),46,O,Power Unit Number
+I940_1125_004010,Vessel,X(20),66,O,Vessel
+I940_1125_004010,Voyage,X(20),86,O,Voyage
+I940_1130_004010,Record ID,X(20),1,O,"Record ID
+‘I940_1130_004010’"
+I940_1130_004010,Record Type,X(4),21,O,"Record Type
+1130"
+I940_1130_004010,Equipment Description Code,X(2),25,O,Not Used
+I940_1130_004010,Temperature,X(6),27,O,Set Temperature
+I940_1130_004010,Unit of Measure,X(2),33,O,Not Used
+I940_1130_004010,Temperature,X(6),35,O,Back Temperature
+I940_1130_004010,Unit of Measure,X(2),41,O,Not Used
+I940_1130_004010,Message,X(60),43,O,Not Used
+I940_1140_004010,Record ID,X(20),1,R,"Record ID
+‘I940_1140_004010’"
+I940_1140_004010,Record Type,X(4),21,R,"Record Type
+1140"
+I940_1140_004010,Method of Payment,X(2),25,R,Method Of Payment
+I940_1140_004010,"W66.02
+Transportation Method",X(2),27,R,"Transportation Method
+‘M’–Motor
+‘H’–Customer Pick Up
+‘U’–UPS Carrier
+‘LT’–Less Than Trailer Load"
+I940_1140_004010,Pallet exchange code,X(1),29,O,Not Used
+I940_1140_004010,Unit Load Option Code,X(2),"30
+",O,Not Used
+I940_1140_004010,Route,X(35),32,O,Routing  - Carrier Name
+I940_1140_004010,FOB Point Code,X(2),67,O,"Not used 
+"
+I940_1140_004010,FOB Point,X(30),69,O,Not Used
+I940_1140_004010,"COD Method of Payment
+Code",X(1),99,O,Not Used
+I940_1140_004010,Amount,X(17),100,O,Not Used
+I940_1140_004010,SCAC,X(4),117,O,SCAC Code
+I940_1140_004010,Pallet Type,X(4),121,O,Pallet Type 
+I940_1141_004010,Record ID,X(20),1,R,"Record ID
+‘I940_1141_004010’"
+I940_1141_004010,Record Type,X(4),21,R,"Record Type
+1141"
+I940_1141_004010,A1SHIP_SHIP_ID,X(100),25,O,HJSHIP Ship ID
+I940_1141_004010,Shipment Reference 1,X(40),125,O,Reference 1
+I940_1141_004010,Shipment Reference 2,X(40),165,O,Reference 2
+I940_1141_004010,Shipment Reference 3,X(40),205,O,Reference 3
+I940_1141_004010,Shipment Reference 4,X(40),245,O,Reference 4
+I940_1141_004010,Shipment Reference 5,X(40),285,O,Reference 5
+I940_1141_004010,Residential Flag,X(1),325,O,Residential Flag
+I940_1141_004010,Signature Required Type,X(1),326,O,Signature Required Type
+I940_1141_004010,Delivery Confirmation Required,X(1),327,O,Delivery Confirmation Required
+I940_1141_004010,Saturday Delivery,X(1),328,O,Saturday Delivery
+I940_1141_004010,Insurance Flag,X(1),329,O,Insurance Flag
+I940_1141_004010,Insurance Charge Amount,X(15),330,O,Insurance Charge Amount
+I940_1141_004010,Insurance Declare Amount,X(15),345,O,Insurance Declare Amount
+I940_1142_004010,Record ID,X(20),1,R,"Record ID
+‘I940_1142_004010’"
+I940_1142_004010,Record Type,X(4),21,R,"Record Type
+1142"
+I940_1142_004010,Parcel Message,X(250),25,O,Parcel Message
+I940_1144_004010,Record ID,X(20),1,R,"Record ID
+‘I940_1144_004010’"
+I940_1144_004010,Record Type,X(4),21,R,"Record Type
+1144"
+I940_1144_004010,Return Name,X(30),25,O,Return Name
+I940_1144_004010,Return Address 1,X(30),55,O,Return Address 1
+I940_1144_004010,Return Address 2,X(30),85,O,Return Address 2
+I940_1144_004010,Return City,X(30),115,O,Return City
+I940_1144_004010,Return State,X(4),145,O,Return State / Province
+I940_1144_004010,Return Zip,X(10),149,O,Return Zip / Postal Code
+I940_1144_004010,Return Country,X(4),159,O,Return Country
+I940_1144_004010,Return Phone,X(20),163,O,Return Phone
+I940_1144_004010,Return Contact,X(30),183,O,Return Contact
+I940_2005_004010,Record ID,X(20),1,R,"Record ID
+‘I940_2005_004010’"
+I940_2005_004010,Record Type,X(4),21,R,"Record Type
+2005"
+I940_2005_004010,Assigned Number,X(9),25,O,Not Used
+I940_2020_004010,Record ID,X(20),1,R,"Record ID
+‘I940_2020_004010’"
+I940_2020_004010,Record Type,X(4),21,R,"Record Type
+2020"
+I940_2020_004010,Quantity,R(17),25,R,"Quantity requested to be
+Shipped by warehouse"
+I940_2020_004010,SKU,X(2),42,R,Unit of Measure
+I940_2020_004010,UPC Code,N(12),44,O,UPC Code
+I940_2020_004010,Qualifier,X(2),56,R,‘VN’ – Product Code
+I940_2020_004010,Item Code,X(48),58,R,Product Code
+I940_2020_004010,Qualifier,X(2),106,O,‘LT’ 
+I940_2020_004010,Level 2,X(48),108,O,Inventory Level 2
+I940_2020_004010,Filler,X(5),156,O,Not used
+I940_2020_004010,Filler,X(3),161,O,Not used
+I940_2020_004010,Filler,X(1),164,O,Not used
+I940_2020_004010,Reference,X(30),165,O,EDI Reference
+I940_2020_004010,Hold Code,X(8),195,O,Hold Code
+I940_2020_004010,Shelf life days ,X(12),203,,Dynamically Calculate number of Days from Expiry or Production Date
+I940_2020_004010,Condition Code,X2),215,O,Not used
+I940_2020_004010,Qualifier,X(2),217,O,Not used
+I940_2020_004010,Product Code,X(48),219,O,Inventory Level 3 
+I940_2030_004010,Record ID,X(20),1,R,"Record ID
+‘I940_2030_004010’"
+I940_2030_004010,Record Type,X(4),21,R,"Record Type
+2030"
+I940_2030_004010,Description,X(45),25,O,Item Description
+I940_2040_004010,Record ID,X(20),1,R,"Record ID
+‘I940_2040_004010’"
+I940_2040_004010,Record Type,X(4),21,R,"Record Type
+2040"
+I940_2040_004010,Qualifier,X(3),25,O,Reference Qualifier
+I940_2040_004010,Reference ID,X(30),28,O,EDI Reference ID
+I940_2040_004010,Reference Description,X(45),58,O,Inventory Level 4
+I940_2045_004010,Record ID,X(20),1,O,"Record ID
+‘I940_2045_004010’"
+I940_2045_004010,Record Type,X(4),21,O,"Record Type
+2045"
+I940_2045_004010,Code,X(3),25,O,Not Used
+I940_2045_004010,Remark,X(80),28,O,Free Form Description
+I940_2050_004010,Record ID,X(20),1,R,"Record ID
+‘I940_2050_004010’"
+I940_2050_004010,Record Type,X(4),21,R,"Record Type
+2050"
+I940_2050_004010,Pack,X(8),25,O,Not Used
+I940_2050_004010,Size,X(10),33,O,Not Used
+I940_2050_004010,UOM,X(2),43,O,Not Used
+I940_2050_004010,Weight,X(12),45,O,"Weight
+Gross / Net Weight "
+I940_2050_004010,Weight Qualifier,X(2),57,O,"Weight Qualifier
+‘G’ – Gross
+‘N’ – Net "
+I940_2050_004010,Weight Unit Code,X(1),59,O,"Weight Unit Code
+‘L’ – LBS
+‘K’ - KGS"
+I940_3010_004010,Record ID,X(20),1,R,Record ID ‘I940_3010_004010’
+I940_3010_004010,Record Type,X(4),21,R,Record Type 3010
+I940_3010_004010,Total Quantity,R(9),25,R,Total Quantity Ordered
+I940_3010_004010,Total Weight,R(12),34,O,Total Weight
+I940_3010_004010,Unit of Measurement ,X(2),46,O,Unit of Measurement
+END,END,X(3),1,R,END

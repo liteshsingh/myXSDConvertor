@@ -1,0 +1,560 @@
+<?xml version="1.0" ?>
+<xsd:schema xmlns="http://www.seeburger.com/s/s" xmlns:bic="http://www.seeburger.com/bicng/lang/schema/" xmlns:inhouse="http://www.seeburger.com/bicng/lang/schema/inhouse" xmlns:xsd="http://www.w3.org/2001/XMLSchema" bic:messageType="INHOUSE" elementFormDefault="qualified" targetNamespace="http://www.seeburger.com/s/s">
+	<xsd:import namespace="http://www.seeburger.com/bicng/lang/schema/inhouse" schemaLocation="platform:/plugin/com.seeburger.bicng.lang.schema.facade.inhouse/resources/inhouse.xsd"/>
+	<xsd:element name="s">
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="inhouse:InhouseMessageRoot">
+					<xsd:sequence>
+						<xsd:element maxOccurs="1 .. *" minOccurs="1 .. *" name="DocumentLoop">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:InhouseSegmentGroup">
+										<xsd:sequence>
+											<xsd:element maxOccurs="1 .. 1" minOccurs="1 .. 1" name="FILE_HEADER_RECORD">
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:extension base="inhouse:Segment">
+															<xsd:sequence>
+																<xsd:element default="###HEADER######" maxOccurs="M" minOccurs="M" name="H1">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="15"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element maxOccurs="M" minOccurs="M" name="H2">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="15"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element maxOccurs="M" minOccurs="M" name="H3">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="15"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element maxOccurs="M" minOccurs="M" name="H4">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="15"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element maxOccurs="M" minOccurs="M" name="H5">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="15"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element maxOccurs="M" minOccurs="M" name="H6">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="15"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element maxOccurs="M" minOccurs="M" name="H7">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="15"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:extension>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+											<xsd:element maxOccurs="1 .. 1" minOccurs="1 .. 1" name="HDR1_RECORD">
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:extension base="inhouse:Segment">
+															<xsd:sequence>
+																<xsd:element default="Date:  " maxOccurs="M" minOccurs="M" name="D1">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="7"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element maxOccurs="M" minOccurs="M" name="D2">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="15"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element maxOccurs="M" minOccurs="M" name="D3">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="7"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element default="  TARGET  P.O. CHANGE REQUEST      " maxOccurs="M" minOccurs="M" name="D4">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="35"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:extension>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+											<xsd:element maxOccurs="1 .. 1" minOccurs="1 .. 1" name="Filler1_RECORD">
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:extension base="inhouse:Segment">
+															<xsd:sequence>
+																<xsd:element default="                                                                      " maxOccurs="M" minOccurs="M" name="D6">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="70"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:extension>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+											<xsd:element maxOccurs="1 .. 1" minOccurs="1 .. 1" name="PO1_RECORD">
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:extension base="inhouse:Segment">
+															<xsd:sequence>
+																<xsd:element default="PO Number:            " maxOccurs="M" minOccurs="M" name="D8">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="70"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:extension>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+											<xsd:element maxOccurs="1 .. 1" minOccurs="1 .. 1" name="PO2_RECORD">
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:extension base="inhouse:Segment">
+															<xsd:sequence>
+																<xsd:element default="PO Date:              " maxOccurs="M" minOccurs="M" name="D10">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="22"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element maxOccurs="M" minOccurs="M" name="D11">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="48"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:extension>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+											<xsd:element maxOccurs="1 .. 1" minOccurs="1 .. 1" name="PO3_RECORD">
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:extension base="inhouse:Segment">
+															<xsd:sequence>
+																<xsd:element default="PO Change Date:       " maxOccurs="M" minOccurs="M" name="D13">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="22"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element maxOccurs="M" minOccurs="M" name="D14">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="48"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:extension>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+											<xsd:element maxOccurs="1 .. 1" minOccurs="1 .. 1" name="PO4_RECORD">
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:extension base="inhouse:Segment">
+															<xsd:sequence>
+																<xsd:element maxOccurs="M" minOccurs="M" name="D15A">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="22"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element maxOccurs="M" minOccurs="M" name="D15B">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="48"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:extension>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+											<xsd:element maxOccurs="1 .. 1" minOccurs="1 .. 1" name="PO5_RECORD">
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:extension base="inhouse:Segment">
+															<xsd:sequence>
+																<xsd:element maxOccurs="M" minOccurs="M" name="D15C">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="22"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element maxOccurs="M" minOccurs="M" name="D15D">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="48"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:extension>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+											<xsd:element maxOccurs="1 .. 1" minOccurs="1 .. 1" name="PO6_RECORD">
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:extension base="inhouse:Segment">
+															<xsd:sequence>
+																<xsd:element maxOccurs="M" minOccurs="M" name="D15E">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="22"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element maxOccurs="M" minOccurs="M" name="D15F">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="48"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:extension>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+											<xsd:element maxOccurs="1 .. 1" minOccurs="1 .. 1" name="Filler2_RECORD">
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:extension base="inhouse:Segment">
+															<xsd:sequence>
+																<xsd:element default="                                                                      " maxOccurs="M" minOccurs="M" name="D16">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="70"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:extension>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+											<xsd:element maxOccurs="1 .. 1" minOccurs="1 .. 1" name="CUST_RECORD">
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:extension base="inhouse:Segment">
+															<xsd:sequence>
+																<xsd:element default="Customer : " maxOccurs="M" minOccurs="M" name="D18">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="70"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:extension>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+											<xsd:element maxOccurs="0 .. 1" minOccurs="0 .. 1" name="ADDR1_RECORD">
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:extension base="inhouse:Segment">
+															<xsd:sequence>
+																<xsd:element maxOccurs="M" minOccurs="M" name="D19a">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="70"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:extension>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+											<xsd:element maxOccurs="0 .. 1" minOccurs="0 .. 1" name="ADDR2_RECORD">
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:extension base="inhouse:Segment">
+															<xsd:sequence>
+																<xsd:element maxOccurs="M" minOccurs="M" name="D19b">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="70"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:extension>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+											<xsd:element maxOccurs="1 .. 1" minOccurs="1 .. 1" name="Filler3_RECORD">
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:extension base="inhouse:Segment">
+															<xsd:sequence>
+																<xsd:element default="                                                                      " maxOccurs="M" minOccurs="M" name="D20">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="70"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:extension>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+											<xsd:element maxOccurs="1 .. 1" minOccurs="1 .. 1" name="TITLE_RECORD">
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:extension base="inhouse:Segment">
+															<xsd:sequence>
+																<xsd:element default="ACTION         " maxOccurs="M" minOccurs="M" name="D22">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="16"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element default="Order QTY " maxOccurs="M" minOccurs="M" name="D23">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="10"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element default="New QTY   " maxOccurs="M" minOccurs="M" name="D24">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="10"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element default="Price  " maxOccurs="M" minOccurs="M" name="D25">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="7"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element default="SKU         " maxOccurs="M" minOccurs="M" name="D26">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="20"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element default="Material #  " maxOccurs="M" minOccurs="M" name="D27">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="13"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element default="UPC           " maxOccurs="M" minOccurs="M" name="D28">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="15"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element maxOccurs="M" minOccurs="M" name="D29">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="20"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:extension>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+											<xsd:element maxOccurs="1 .. 1" minOccurs="1 .. 1" name="Filler4_RECORD">
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:extension base="inhouse:Segment">
+															<xsd:sequence>
+																<xsd:element default=" " maxOccurs="M" minOccurs="M" name="D30">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="70"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:extension>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+											<xsd:element maxOccurs="1 .. 1" minOccurs="1 .. 1" name="Filler4:2_RECORD">
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:extension base="inhouse:Segment">
+															<xsd:sequence>
+																<xsd:element maxOccurs="M" minOccurs="M" name="D30:2">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="70"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:extension>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+											<xsd:element maxOccurs="0 .. *" minOccurs="0 .. *" name="DATA_RECORD">
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:extension base="inhouse:Segment">
+															<xsd:sequence>
+																<xsd:element maxOccurs="M" minOccurs="M" name="D32">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="16"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element maxOccurs="M" minOccurs="M" name="D33">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="10"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element maxOccurs="M" minOccurs="M" name="D34">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="10"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element default="$" maxOccurs="M" minOccurs="M" name="D35">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="7"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element maxOccurs="M" minOccurs="M" name="D36">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="20"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element maxOccurs="M" minOccurs="M" name="D37">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="13"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element maxOccurs="M" minOccurs="M" name="D38">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="15"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element maxOccurs="M" minOccurs="M" name="D39">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="20"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:extension>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+											<xsd:element maxOccurs="1 .. 1" minOccurs="1 .. 1" name="Filler5_RECORD">
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:extension base="inhouse:Segment">
+															<xsd:sequence>
+																<xsd:element default="--------------------------------------------------------------------------------" maxOccurs="M" minOccurs="M" name="D40">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="80"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:extension>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+											<xsd:element maxOccurs="1 .. 1" minOccurs="1 .. 1" name="TTL_RECORD">
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:extension base="inhouse:Segment">
+															<xsd:sequence>
+																<xsd:element default="Number of Items Changed:    " maxOccurs="M" minOccurs="M" name="D42">
+																	<xsd:simpleType>
+																		<xsd:restriction base="inhouse:AN">
+																			<xsd:length value="70"/>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:extension>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

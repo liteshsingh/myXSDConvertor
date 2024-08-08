@@ -1,0 +1,63 @@
+Record_Name,Field Business Name,"Field
+Length","Starting
+Position","Required/ Optional
+",Description
+PARTNER,PARTNER,X(8),1,R,Identify the Record ‘PARTNER’
+PARTNER,PARTNER,X(10),9,R,"Customer Code in 3PL
+Identify the PARTNER ID"
+PARTNER,ROUTE,X(8),1,R,Identify the Record ‘ROUTE’ 
+PARTNER,ROUTE,X(10),9,R,Customer Code in 3PL
+PARTNER,COMPANY,X(8),1,R,Identify the Record ‘COMPANY’
+PARTNER,COMPANY,X(2),9,R,Company Code in 3PL
+PARTNER,SET,X(3),1,R,Identify the Record ‘SET’
+PARTNER,SET,X(3),9,R,Transaction Set ID ‘ADJ’
+PARTNER,BEGIN,X(8),1,R,Identify Record
+I947_1020_004010,Record ID,X(20),1,R,"Record ID
+‘I947_1020_004010’"
+I947_1020_004010,Record Type,X(4),21,R,"Record Type
+1020"
+I947_1020_004010,Audit Date,X(8),25,R,Adjustment Date
+I947_1020_004010,Audit Number,X(22),33,R,Audit Number
+I947_1020_004010,Audit Reference,X(22),35,O,Not used
+I947_2020_004010,Record ID,X(20),1,R,"Record ID
+‘I947_2020_004010’"
+I947_2020_004010,Record Type,X(4),21,R,"Record Type
+2020"
+I947_2020_004010,Adjustment Reason Code,X(2),25,R,"Adjustment Reason
+Values: ‘05’, ‘55’"
+I947_2020_004010,Adjustment Quantity,R(12),27,R,"Quantity
+Negative Quantity –Off Hold (preceded by a minus sign)
+Positive Quantity- On Hold"
+I947_2020_004010,Unit of Measure Code,X(2),39,R,UOM
+I947_2020_004010,UPC Case Code,X(12),41,O,UPC Case Code
+I947_2020_004010,Product Qualifier,X(2),53,O,"Product Qualifier
+Values: ‘VN’"
+I947_2020_004010,Product Code,X(48),55,O,Item Code
+I947_2020_004010,Product Qualifier,X(2),103,O,"Product Qualifier
+Values: ‘ZZ’"
+I947_2020_004010,Hold code,X(48),105,R,Hold Code /To Hold code 
+I947_2020_004010,Inventory Level 2,X(12),153,O,Inventory Level 2
+I947_2020_004010,Weight,R(12),165,O,Not Used
+I947_2020_004010,Weight Qualifier,X(2),177,O,Not Used
+I947_2020_004010,Weight Unit Code,X(1),179,O,Not Used
+I947_2020_004010,Weight,R(12),180,O,Not Used
+I947_2020_004010,Weight Qualifier,X(2),192,O,Not Used
+I947_2020_004010,Weight Unit Code,X(1),194,O,Not Used
+I947_2020_004010,Inventory Type Code,X(2),195,O,Not Used
+I947_2020_004010,Product Qualifier,X(2),197,O,Not Used
+I947_2020_004010,Inventory Level 3,X(48),199,O,Inventory Level 3
+I947_2020_004010,Product Qualifier,X(2),247,O,Not Used
+I947_2020_004010,Inventory Level 4,X(48),249,O,Inventory Level 4
+I947_2020_004010,From Hold code ,X(5) ,297,O,"From hold code 
+Valid  only with Positive Quantity to remove a product from current hold "
+I943_2030_004010,Record ID,X(20),1,R,"Record ID
+‘I943_2030_004010’"
+I943_2030_004010,Record Type,X(4),21,R,"Record Type
+2030"
+I943_2030_004010,Description,X(45),25,O,Item Description
+I943_2041_004010,Record ID,X(20),1,R,"Record ID
+‘I943_2041_004010’"
+I943_2041_004010,Record Type,X(4),21,R,"Record Type
+2041"
+I943_2041_004010,Description,X(45),25,O,Remarks
+END,END,X(3),1,R,END

@@ -1,0 +1,32 @@
+PARTNER 10060BT   
+ROUTE   10060BT   
+COMPANY W1
+SET     940
+BEGIN   
+I940_1020_004010    1020R514728                514728-GR970-JW02     JW02                          2                           514728                                  
+I940_1040_004010    1040ST 07012 WASH CRT HS WM/SAM DD                                 9 353860701                                                                       
+I940_1060_004010    10601400 OLD CHILLICOTHE ROAD                                                                                     
+I940_1070_004010    1070WASHINGTON COURT HOU OH       OH43160             
+I940_1090_004010    1090QN 15  OF  16                                                                 
+I940_1090_004010    1090IT 5733                                                                       
+I940_1090_004010    1090ZZ 1 OF 01                                                                    
+I940_1090_004010    1090ED N                                                                          
+I940_1090_004010    1090CO 0555932012                    0555932012                                   
+I940_1090_004010    1090KK 26421381                      0555932012                                   
+I940_1090_004010    1090                                 0555932012                                   
+I940_1110_004010    11101020210326
+I940_1110_004010    11106820210329
+I940_1120_004010    1120GENEST PALLETS: LOC1-13=34.0                                                       
+I940_1120_004010    1120GEN29726/28.6                                                                      
+I940_1120_004010    1120WHICUSTOMER REQ: Build to Full Pallet                                              
+I940_1120_004010    1120WHICUSTOMER REQ: Use Emerson Recordr                                               
+I940_1120_004010    1120INTAPPOINTMENTS REQUIRED 72HRS   IN ADVANCE. CARRIER TO UNLOAD                     
+I940_1120_004010    1120INTSORT AND SEGREGATE ON DOCK.                                                     
+I940_1120_004010    1120QN 15 OF  16                                                                       
+I940_1120_004010    1120KK 26421381                                                                        
+I940_1130_004010    1130  26    FA26    FA                                                            
+I940_1140_004010    1140DFM  01DC WILLIAMS TRANSP                                                                   WMXN
+I940_2010_004010    20101        
+I940_2020_004010    20200                PL            VNWBT                                             LTGR970                                                                                                                                                          
+I940_3010_004010    3010                       
+END

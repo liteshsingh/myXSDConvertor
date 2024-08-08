@@ -1,0 +1,378 @@
+860 Parser.ecs,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Table of Contents,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+860 . .,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,..,. ,.,.,.,1,,
+1 - FILE_HEADER_RECORD .,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,,..,. ,.,.,.,2,,
+2 - HDR1_RECORD .,,,,,,,,,,,,,,,,,,,,,,,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,..,.,,.,.,.,3,,
+Filler1_RECORD .,,,,,,,,,,,,,,,,,,,,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,,.,.,.,4,
+PO1_RECORD . .,,,,,,,,,,,,,,,,,,,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,,.,.,.,5
+PO2_RECORD . .,,,,,,,,,,,,,,,,,,,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,,.,.,.,6
+PO3_RECORD . .,,,,,,,,,,,,,,,,,,,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,,.,.,.,7
+PO4_RECORD . .,,,,,,,,,,,,,,,,,,,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,,.,.,.,8
+PO5_RECORD . .,,,,,,,,,,,,,,,,,,,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,,.,.,.,9
+PO6_RECORD . .,,,,,,,,,,,,,,,,,,,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,,.,.,10,
+Filler2_RECORD .,,,,,,,,,,,,,,,,,,,,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,,.,.,11,,
+CUST_RECORD .,,,,,,,,,,,,,,,,,,,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,,..,.,,.,.,12,,
+ADDR1_RECORD .,,,,,,,,,,,,,,,,,,,,,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,,..,.,,.,.,13,,
+ADDR2_RECORD .,,,,,,,,,,,,,,,,,,,,,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,,..,.,,.,.,14,,
+Filler3_RECORD .,,,,,,,,,,,,,,,,,,,,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,,.,.,15,,
+TITLE_RECORD .,,,,,,,,,,,,,,,,,,,,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,,.,.,16,
+Filler4_RECORD .,,,,,,,,,,,,,,,,,,,,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,,.,.,17,,
+Filler4:2_RECORD . .,,,,,,,,,,,,,,,,,,,,,,,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,,..,.,,.,.,18,,
+DATA_RECORD .,,,,,,,,,,,,,,,,,,,,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,,.,.,19,
+Filler5_RECORD .,,,,,,,,,,,,,,,,,,,,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,,.,.,20,,
+TTL_RECORD .,,,,,,,,,,,,,,,,,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,. .,.,,.,.,21,,,
+Field Dictionary . .,,,,,,,,,,,,,,,,,,,,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,. .,.,,.,.,22,,,
+6/1/2023,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,i,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,For internal use only,,,,,,,,,,,,,,,,,,,,
+860 Parser.ecs,,,,,
+860,,,,,
+ID,Name,Req,Usage,Min Use,Max Use
+1,FILE_HEADER_RECORD,Mandatory,Must use,1,1
+2,HDR1_RECORD,Optional,Must use,0,1
+Filler1_RECO,,Mandatory,Must use,1,1
+RD,,,,,
+PO1_RECOR,,Mandatory,Must use,1,1
+D,,,,,
+PO2_RECOR,,Optional,Must use,0,1
+D,,,,,
+PO3_RECOR,,Mandatory,Must use,1,1
+D,,,,,
+PO4_RECOR,,Optional,Must use,1,1
+D,,,,,
+PO5_RECOR,,Mandatory,Must use,1,1
+D,,,,,
+PO6_RECOR,,Optional,Must use,1,1
+D,,,,,
+Filler2_RECO,,Mandatory,Must use,1,1
+RD,,,,,
+CUST_RECO,,Mandatory,Must use,1,1
+RD,,,,,
+ADDR1_REC,,Mandatory,Must use,1,1
+ORD,,,,,
+ADDR2_REC,,Mandatory,Must use,1,1
+ORD,,,,,
+Filler3_RECO,,Mandatory,Must use,1,1
+RD,,,,,
+TITLE_RECO,,Mandatory,Must use,1,1
+RD,,,,,
+Filler4_RECO,,Mandatory,Must use,1,1
+RD,,,,,
+Filler4:2_REC,,Mandatory,Must use,1,1
+ORD,,,,,
+DATA_RECO,,Mandatory,Must use,0,1
+RD,,,,,
+Filler5_RECO,,Mandatory,Must use,1,1
+RD,,,,,
+TTL_RECORD,,Mandatory,Must use,1,1
+6/1/2023,1,,,For internal use only,
+860 Parser.ecs,,,,,,,,,
+1,,FILE_HEADER_RECORD,,,,Min Use: 1,,Max Use: 1,
+,,,,,,,Mandatory,,
+,,,,,,Grp:,,,Fields: 7
+User Option (Usage):,,Must use,,,,,,,
+Pos,ID,FIELD,Type,Justify,Len,Size,Start,End,Occurs
+1,H1,HEADER_LABEL,String,Left,15,15,1,15,1
+,,Format:,X(15),,,,,,
+2,H2,ISA_SENDER_ID,String,Left,15,15,16,30,1
+,,Format:,X(15),,,,,,
+3,H3,ISA_RECEIVER_ID,String,Left,15,15,31,45,1
+,,Format:,X(15),,,,,,
+4,H4,GS_SENDER_ID,String,Left,15,15,46,60,1
+,,Format:,X(15),,,,,,
+5,H5,GS_RECEIVER_ID,String,Left,15,15,61,75,1
+,,Format:,X(15),,,,,,
+6,H6,TRANSACTION_TYPE,String,Left,15,15,76,90,1
+,,Format:,X(15),,,,,,
+7,H7,VERSION,String,Left,15,15,91,105,1
+,,Format:,X(15),,,,,,
+6/1/2023,,,2,,,,,For internal use only,
+860 Parser.ecs,,,,,,,,,
+2,,HDR1_RECORD,,,,Min Use: 0,,Max Use: 1,
+,,,,,,,Optional,,
+,,,,,,Grp:,,,Fields: 4
+User Option (Usage):,,Must use,,,,,,,
+Pos,ID,FIELD,Type,Justify,Len,Size,Start,End,Occurs
+1,D1,DATE_LABEL,String,Left,7,7,1,7,1
+,,Format:,X(7),,,,,,
+2,D2,DATE,String,Left,15,15,8,22,1
+,,Format:,X(15),,,,,,
+3,D3,SYSTEM_TIME,String,Left,7,7,23,29,1
+,,Format:,X(7),,,,,,
+4,D4,DOC_TYPE,String,Left,35,35,30,64,1
+,,Format:,X(35),,,,,,
+6/1/2023,,,3,,,,,For internal use only,
+860 Parser.ecs,,,,,,,,,
+Filler1_REC,,,,,,Min Use: 1,,Max Use: 1,
+,,,,,,,Mandatory,,
+ORD,,,,,,Grp:,,,Fields: 1
+User Option (Usage):,,Must use,,,,,,,
+Pos,ID,FIELD,Type,Justify,Len,Size,Start,End,Occurs
+1,D6,FILLER,String,Left,70,70,1,70,1
+,,Format:,X(70),,,,,,
+6/1/2023,,,4,,,,,For internal use only,
+860 Parser.ecs,,,,,,,,,
+PO1_RECOR,,,,,,Min Use: 1,,Max Use: 1,
+,,,,,,,Mandatory,,
+D,,,,,,Grp:,,,Fields: 1
+User Option (Usage):,,Must use,,,,,,,
+Pos,ID,FIELD,Type,Justify,Len,Size,Start,End,Occurs
+1,D8,PO Number,String,Left,70,70,1,70,1
+,,Format:,X(70),,,,,,
+6/1/2023,,,5,,,,,For internal use only,
+860 Parser.ecs,,,,,,,,,
+PO2_RECOR,,,,,,Min Use: 0,,Max Use: 1,
+,,,,,,,Optional,,
+D,,,,,,Grp:,,,Fields: 2
+User Option (Usage):,,Must use,,,,,,,
+Pos,ID,FIELD,Type,Justify,Len,Size,Start,End,Occurs
+1,D10,PO Date,String,Left,22,22,1,22,1
+,,Format:,X(22),,,,,,
+2,D11,PO Change Date,String,Left,48,48,23,70,1
+,,Format:,X(48),,,,,,
+6/1/2023,,,6,,,,,For internal use only,
+860 Parser.ecs,,,,,,,,,
+PO3_RECOR,,,,,,Min Use: 1,,Max Use: 1,
+,,,,,,,Mandatory,,
+D,,,,,,Grp:,,,Fields: 2
+User Option (Usage):,,Must use,,,,,,,
+Pos,ID,FIELD,Type,Justify,Len,Size,Start,End,Occurs
+1,D13,PO Change Date,String,Left,22,22,1,22,1
+,,Format:,X(22),,,,,,
+2,D14,,String,Left,48,48,23,70,1
+,,Format:,X(48),,,,,,
+6/1/2023,,,7,,,,,For internal use only,
+860 Parser.ecs,,,,,,,,,
+PO4_RECOR,,,,,,Min Use: 1,,Max Use: 1,
+,,,,,,,Optional,,
+D,,,,,,Grp:,,,Fields: 2
+User Option (Usage):,,Must use,,,,,,,
+Pos,ID,FIELD,Type,Justify,Len,Size,Start,End,Occurs
+2,D15 B,,String,Left,48,48,1,48,1
+,,Format:,X(48),,,,,,
+1,D15 A,,String,Left,22,22,49,70,1
+,,Format:,X(22),,,,,,
+6/1/2023,,,8,,,,,For internal use only,
+860 Parser.ecs,,,,,,,,,
+PO5_RECOR,,,,,,Min Use: 1,,Max Use: 1,
+,,,,,,,Mandatory,,
+D,,,,,,Grp:,,,Fields: 2
+User Option (Usage):,,Must use,,,,,,,
+Pos,ID,FIELD,Type,Justify,Len,Size,Start,End,Occurs
+1,D15 C,,String,Left,22,22,1,22,1
+,,Format:,X(22),,,,,,
+2,D15 D,,String,Left,48,48,23,70,1
+,,Format:,X(48),,,,,,
+6/1/2023,,,9,,,,,For internal use only,
+860 Parser.ecs,,,,,,,,,
+PO6_RECOR,,,,,,Min Use: 1,,Max Use: 1,
+,,,,,,,Optional,,
+D,,,,,,Grp:,,,Fields: 2
+User Option (Usage):,,Must use,,,,,,,
+Pos,ID,FIELD,Type,Justify,Len,Size,Start,End,Occurs
+1,D15 E,,String,Left,22,22,1,22,1
+,,Format:,X(22),,,,,,
+2,D15 F,,String,Left,48,48,23,70,1
+,,Format:,X(48),,,,,,
+6/1/2023,,,10,,,,,For internal use only,
+860 Parser.ecs,,,,,,,,,
+Filler2_REC,,,,,,Min Use: 1,,Max Use: 1,
+,,,,,,,Mandatory,,
+ORD,,,,,,Grp:,,,Fields: 1
+User Option (Usage):,,Must use,,,,,,,
+Pos,ID,FIELD,Type,Justify,Len,Size,Start,End,Occurs
+1,D16,,String,Left,70,70,1,70,1
+,,Format:,X(70),,,,,,
+6/1/2023,,,11,,,,,For internal use only,
+860 Parser.ecs,,,,,,,,,
+CUST_RECO,,,,,,Min Use: 1,,Max Use: 1,
+,,,,,,,Mandatory,,
+RD,,,,,,Grp:,,,Fields: 1
+User Option (Usage):,,Must use,,,,,,,
+Pos,ID,FIELD,Type,Justify,Len,Size,Start,End,Occurs
+1,D18,,String,Left,70,70,1,70,1
+,,Format:,X(70),,,,,,
+6/1/2023,,,12,,,,,For internal use only,
+860 Parser.ecs,,,,,,,,,
+ADDR1_REC,,,,,,Min Use: 1,,Max Use: 1,
+,,,,,,,Mandatory,,
+ORD,,,,,,Grp:,,,Fields: 1
+User Option (Usage):,,Must use,,,,,,,
+Pos,ID,FIELD,Type,Justify,Len,Size,Start,End,Occurs
+1,D19 A,,String,Left,70,70,1,70,1
+,,Format:,X(70),,,,,,
+6/1/2023,,,13,,,,,For internal use only,
+860 Parser.ecs,,,,,,,,,
+ADDR2_REC,,,,,,Min Use: 1,,Max Use: 1,
+,,,,,,,Mandatory,,
+ORD,,,,,,Grp:,,,Fields: 1
+User Option (Usage):,,Must use,,,,,,,
+Pos,ID,FIELD,Type,Justify,Len,Size,Start,End,Occurs
+1,D19 B,,String,Left,70,70,1,70,1
+,,Format:,X(70),,,,,,
+6/1/2023,,,14,,,,,For internal use only,
+860 Parser.ecs,,,,,,,,,
+Filler3_REC,,,,,,Min Use: 1,,Max Use: 1,
+,,,,,,,Mandatory,,
+ORD,,,,,,Grp:,,,Fields: 1
+User Option (Usage):,,Must use,,,,,,,
+Pos,ID,FIELD,Type,Justify,Len,Size,Start,End,Occurs
+1,D20,,String,Left,70,70,1,70,1
+,,Format:,X(70),,,,,,
+6/1/2023,,,15,,,,,For internal use only,
+860 Parser.ecs,,,,,,,,,
+TITLE_REC,,,,,,Min Use: 1,,Max Use: 1,
+,,,,,,,Mandatory,,
+ORD,,,,,,Grp:,,,Fields: 9
+User Option (Usage):,,Must use,,,,,,,
+Pos,ID,FIELD,Type,Justify,Len,Size,Start,End,Occurs
+1,D22,ACTION,String,Left,16,16,1,16,1
+,,Format:,X(16),,,,,,
+2,D23,,String,Left,10,10,17,26,1
+,,Format:,X(10),,,,,,
+3,D24,NEWQTY,String,Left,10,10,27,36,1
+,,Format:,X(10),,,,,,
+4,D25,NEW_PRICE,String,Left,7,7,37,43,1
+,,Format:,X(7),,,,,,
+5,D26,,String,Left,20,20,44,63,1
+,,Format:,X(20),,,,,,
+6,D27,,String,Left,13,13,64,76,1
+,,Format:,X(13),,,,,,
+7,D28,UPC,String,Left,15,15,77,91,1
+,,Format:,X(15),,,,,,
+8,D29,,String,Left,20,20,92,111,1
+,,Format:,X(20),,,,,,
+9,ITEM_D,,String,Left,20,20,112,131,1
+,ESCRIP,,,,,,,,
+,TION,,,,,,,,
+,,Format:,X(20),,,,,,
+6/1/2023,,,16,,,,,For internal use only,
+860 Parser.ecs,,,,,,,,,
+Filler4_REC,,,,,,Min Use: 1,,Max Use: 1,
+,,,,,,,Mandatory,,
+ORD,,,,,,Grp:,,,Fields: 1
+User Option (Usage):,,Must use,,,,,,,
+Pos,ID,FIELD,Type,Justify,Len,Size,Start,End,Occurs
+1,D30,,String,Left,70,70,1,70,1
+,,Format:,X(70),,,,,,
+6/1/2023,,,17,,,,,For internal use only,
+860 Parser.ecs,,,,,,,,,
+Filler4:2_RE,,,,,,Min Use: 1,,Max Use: 1,
+,,,,,,,Mandatory,,
+CORD,,,,,,Grp:,,,Fields: 1
+User Option (Usage):,,Must use,,,,,,,
+Pos,ID,FIELD,Type,Justify,Len,Size,Start,End,Occurs
+1,D30:2,,String,Left,70,70,1,70,1
+,,Format:,X(70),,,,,,
+6/1/2023,,,18,,,,,For internal use only,
+860 Parser.ecs,,,,,,,,,
+DATA_REC,,,,,,Min Use: 0,,Max Use: 1,
+,,,,,,,Mandatory,,
+ORD,,,,,,Grp:,,,Fields: 9
+User Option (Usage):,,Must use,,,,,,,
+Pos,ID,FIELD,Type,Justify,Len,Size,Start,End,Occurs
+1,D32,,String,Left,16,16,1,16,1
+,,Format:,X(16),,,,,,
+2,D33,,String,Left,10,10,17,26,1
+,,Format:,X(10),,,,,,
+3,D34,,String,Left,10,10,27,36,1
+,,Format:,X(10),,,,,,
+4,D35,,String,Left,7,7,37,43,1
+,,Format:,X(7),,,,,,
+5,D36,,String,Left,20,20,44,63,1
+,,Format:,X(20),,,,,,
+6,D37,,String,Left,13,13,64,76,1
+,,Format:,X(13),,,,,,
+7,D38,,String,Left,15,15,77,91,1
+,,Format:,X(15),,,,,,
+8,D39,,String,Left,20,20,92,111,1
+,,Format:,X(20),,,,,,
+9,ITEM_D,,String,Left,2,2,112,113,1
+,ESCRIP,,,,,,,,
+,TION.,,,,,,,,
+,,Format:,X(2),,,,,,
+6/1/2023,,,19,,,,,For internal use only,
+860 Parser.ecs,,,,,,,,,
+Filler5_REC,,,,,,Min Use: 1,,Max Use: 1,
+,,,,,,,Mandatory,,
+ORD,,,,,,Grp:,,,Fields: 2
+User Option (Usage):,,Must use,,,,,,,
+Pos,ID,FIELD,Type,Justify,Len,Size,Start,End,Occurs
+1,D40,,String,Left,80,80,1,80,1
+,,Format:,X(80),,,,,,
+1,Total,,String,Left,25,25,81,105,1
+,Items,,,,,,,,
+,Change,,,,,,,,
+,d DESC,,,,,,,,
+,,Format:,X(25),,,,,,
+6/1/2023,,,20,,,,,For internal use only,
+860 Parser.ecs,,,,,,,,,
+TTL_RECOR,,,,,,Min Use: 1,,Max Use: 1,
+,,,,,,,Mandatory,,
+D,,,,,,Grp:,,,Fields: 1
+User Option (Usage):,,Must use,,,,,,,
+Pos,ID,FIELD,Type,Justify,Len,Size,Start,End,Occurs
+1,D42,TOTAL_DESC,String,Left,70,70,1,70,1
+,,Format:,X(70),,,,,,
+6/1/2023,,,21,,,,,For internal use only,
+860 Parser.ecs,,,,,
+Field Dictionary,,,,,
+ID,FIELD,Type,Justify,Padding,Len
+2,D40,String,Left,SPACE,25
+D1,DATE_LABEL,String,Left,SPACE,7
+D10,PO Date,String,Left,SPACE,22
+D11,PO Change Date,String,Left,SPACE,48
+D13,PO Change Date,String,Left,SPACE,22
+D14,,String,Left,SPACE,48
+D15 A,,String,Left,SPACE,22
+D15 B,,String,Left,SPACE,48
+D15 C,,String,Left,SPACE,22
+D15 D,,String,Left,SPACE,48
+D15 E,,String,Left,SPACE,22
+D15 F,,String,Left,SPACE,48
+D16,,String,Left,SPACE,70
+D18,,String,Left,SPACE,70
+D19 A,,String,Left,SPACE,70
+D19 B,,String,Left,SPACE,70
+D2,DATE,String,Left,SPACE,15
+D20,,String,Left,SPACE,70
+D22,,String,Left,SPACE,16
+D23,,String,Left,SPACE,10
+D24,,String,Left,SPACE,10
+D25,,String,Left,SPACE,7
+D26,,String,Left,SPACE,20
+D27,,String,Left,SPACE,13
+D28,,String,Left,SPACE,15
+D29,,String,Left,SPACE,20
+D3,SYSTEM_TIME,String,Left,SPACE,7
+D30,,String,Left,SPACE,70
+D30:2,,String,Left,SPACE,70
+D32,,String,Left,SPACE,16
+D33,,String,Left,SPACE,10
+D34,,String,Left,SPACE,10
+D35,,String,Left,SPACE,7
+D36,,String,Left,SPACE,20
+D37,,String,Left,SPACE,13
+D38,,String,Left,SPACE,15
+D39,,String,Left,SPACE,20
+D4,DOC_TYPE,String,Left,SPACE,35
+D40,,String,Left,SPACE,80
+D42,,String,Left,SPACE,70
+D6,FILLER,String,Left,SPACE,70
+D8,PO Number,String,Left,SPACE,70
+H1,HEADER_LABEL,String,Left,SPACE,15
+H2,ISA_SENDER_ID,String,Left,SPACE,15
+6/1/2023,22,,For internal use only,,
+860 Parser.ecs,,,,,
+ID,FIELD,Type,Justify,Padding,Len
+H3,ISA_RECEIVER_ID,String,Left,SPACE,15
+H4,GS_SENDER_ID,String,Left,SPACE,15
+H5,GS_RECEIVER_ID,String,Left,SPACE,15
+H6,TRANSACTION_TYPE,String,Left,SPACE,15
+H7,VERSION,String,Left,SPACE,15
+ITEM_DESC,,String,Left,SPACE,20
+RIPTION,,,,,
+ITEM_DESC,,String,Left,SPACE,2
+RIPTION.,,,,,
+Total Items,,String,Left,SPACE,25
+Changed,,,,,
+DESC,,,,,
+6/1/2023,23,,For internal use only,,

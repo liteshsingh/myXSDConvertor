@@ -1,0 +1,94 @@
+Record_Name,Field Business Name,"Field
+Length","Starting
+Position","Required/ Optional
+",Description
+PARTNER,PARTNER,X(8),1,R,Identify the Record ‘PARTNER’
+PARTNER,PARTNER,X(10),9,R,"The following logic is applied
+Check Customer EDI Partner ID field
+If the above not populated use Customer Reference field (first 10 characters)
+If the above not populated use Customer Code
+
+Identify the PARTNER ID"
+PARTNER,SET,X(3),1,R,Identify the Record ‘SET’
+PARTNER,SET,X(3),9,R,Transaction Set ID ‘846’
+PARTNER,ROUTE,X(8),1,R,Identify the Record ‘ROUTE’ 
+PARTNER,ROUTE,X(10),9,R,Customer Code in A1 3PL
+PARTNER,COMPANY,X(8),1,R,Identify the Record ‘COMPANY’
+PARTNER,COMPANY,X(2),9,R,Company Code in A1 3PL
+PARTNER,BEGIN,X(8),1,R,Identify Record
+PARTNER,Record Type,X(4),1,R,"Record Type
+1020"
+PARTNER,Transaction Set Purpose Code,X(2),5,R,‘08’-Status Report
+PARTNER,Report Type Code,X(2),7,R,‘LC’-Location Inventory Report
+PARTNER,Reference Number,X(30),9,R,Reference Number
+PARTNER,Date,X(8),39,R,Current Date
+PARTNER,Record Type,X(4),1,R,"Record Type
+1020"
+PARTNER,Date Qualifier,X(3),5,R,‘007’-Effective Date
+PARTNER,Date,X(8),8,R,"The current Date of this transaction ‘CCYYMMDD’
+‘CC’ – first 2 digits of the calendar year;
+‘YY’ – last 2 digits of the calendar year;
+‘MM’ – month (01 to 12);
+‘DD’ – day (01 to 31)."
+PARTNER,Record Type,X(4),1,R,"Record Type
+1040"
+PARTNER,Organization ID Code,X(3),5,R,"Organization ID Code:
+‘DE’ – Depositor "
+PARTNER,Name,X(60),8,R,Customer Name
+PARTNER,ID Qualifier,X(2),68,O,‘91’
+PARTNER,ID,X(60),70,O,Customer External Reference
+PARTNER,Record Type,X(4),1,R,"Record Type
+1040"
+PARTNER,Organization ID Code,X(3),5,R,"Organization ID Code:
+‘WH’ - Company"
+PARTNER,Name,X(60),8,R,Company Name
+PARTNER,ID Qualifier,X(2),68,O,‘91’
+PARTNER,ID,X(60),70,O,Company Reference Number
+PARTNER,Record Type,X(4),1,R,"Record Type
+2010"
+PARTNER,Assigned Number,X(20),5,O,Filler
+PARTNER,Qualifier,X(2),25,R,‘VN’– Vendor Number
+PARTNER,Product ID,X(48),27,R,Item Code
+PARTNER,Qualifier,X(2),75,O,‘LT’– Lot Number
+PARTNER,Product ID,X(48),77,O,Inventory level 2
+PARTNER,Qualifier,X(2),125,O,‘PD’-Pallet ID 
+PARTNER,Product ID,X(48),127,O,Inventory level 3
+PARTNER,Qualifier,X(2),175,O,‘PC’- Production Date Code
+PARTNER,Product ID,X(48),177,O,Inventory level 4
+PARTNER,Qualifier,X(2),225,O,Not used
+PARTNER,Product ID,X(48),227,O,Inventory level 2 description
+PARTNER,Qualifier,X(2),275,O,Not used 
+PARTNER,Product ID,X(48),277,O,Inventory level 3 description
+PARTNER,Qualifier,X(2),325,O,Not used 
+PARTNER,Product ID,X(48),327,O,Inventory level 4 description
+PARTNER,Qualifier,X(2),375,O,Not used 
+PARTNER,Product ID,X(48),377,O,Hold code 
+PARTNER,Qualifier,X(2),425,O,Not used 
+PARTNER,Product ID,X(48),427,O,Inventory Expiry Date
+PARTNER,Qualifier,X(2),475,O,Not used 
+PARTNER,Product ID,X(48),477,O,Inventory Received Date
+PARTNER,Qualifier,X(2),525,O,Not Used
+PARTNER,Product ID,X(48),577,O,Item Description 1
+PARTNER,Qualifier,X(2),625,O,Not Used
+PARTNER,Product ID,X(48),677,O,"Item Description 2
+(fist 48 characters)"
+PARTNER,Record Type,X(4),1,R,"Record Type
+2040"
+PARTNER,Measurement Reference ID Code,X(2),5,O,Not used
+PARTNER,Measurement Qualifier,X(3),7,R,"‘N’- Net Weight
+‘G’- Gross Weight"
+PARTNER,Weight,X(22),10,R,"On Hand Net Weight ;
+On Hand Goss Weight"
+PARTNER,Unit of Measure,X(2),32,R,‘LB’- Pound
+PARTNER,Record Type,X(4),1,R,"Record Type
+2320"
+PARTNER,Quantity Qualifier,X(2),5,R,"Qualifier:
+‘QA’ - Quantity on Hand
+‘QH’ - Quantity on Hold
+74’ – Damaged Quantity
+‘27’ – On Order Quantity (Allocated Quantity)
+‘33’ – Available Quantity, Calculated as (On Hand Quantity – On Order Quantity – Hold Non Ship Quantity)"
+PARTNER,Quantity,X(17),7,R,Quantity
+PARTNER,UOM,X(2),24,R,SKU Code
+PARTNER,Hold code,X(30),26,O,Hold code 
+PARTNER,END,X(3),1,R,END

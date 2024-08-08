@@ -1,0 +1,82 @@
+Record_Name,Field Business Name,"Field
+Length","Starting
+Position","Required/ Optional
+",Description
+PARTNER,PARTNER,X(8),1,R,Identify the Record ‘PARTNER’
+PARTNER,PARTNER,X(10),9,R,"The following logic is applied
+Check Customer EDI Partner ID field
+If the above not populated use Customer Reference field (first 10 characters)
+If the above not populated use Customer Code
+
+Identify the PARTNER ID"
+PARTNER,SET,X(3),1,R,Identify the Record ‘SET’
+PARTNER,SET,X(3),9,R,Transaction Set ID ‘947’
+PARTNER,ROUTE,X(8),1,R,Identify the Record ‘ROUTE’ 
+PARTNER,ROUTE,X(10),9,R,Customer Code in A1 3PL
+PARTNER,COMPANY,X(8),1,R,Identify the Record ‘COMPANY’
+PARTNER,COMPANY,X(2),9,R,Company Code in A1 3PL
+PARTNER,BEGIN,X(8),1,R,Identify Record
+PARTNER,Record Type,X(4),1,R,"Record Type
+1020"
+PARTNER,Audit Date,X(8),5,R,Date
+PARTNER,Audit Number,X(22),13,R,Audit Number
+PARTNER,Audit Reference,X(22),35,O,Audit Number
+PARTNER,Record Type,X(4),1,R,"Record Type
+1040"
+PARTNER,Organization ID Code,X(3),5,R,"Organization ID Code:
+‘DE’ – Depositor "
+PARTNER,Name,X(60),8,R,Customer Name
+PARTNER,ID Qualifier,X(2),68,O,‘91’
+PARTNER,ID,X(60),70,O,Customer External Reference
+PARTNER,Record Type,X(4),1,R,"Record Type
+2020"
+PARTNER,Adjustment Reason Code,X(2),5,R,"Adjustment Reason
+First 2 characters of Adjustment Type (ADJU)
+‘05’ - Put product on hold
+‘55’ - Take product off hold"
+PARTNER,Adjustment Quantity,X(12),7,R,Quantity expressed in lowest SKU Code
+PARTNER,Unit of Measure Code,X(2),19,R,"Unit of Measure
+A1 3PL SKU Code"
+PARTNER,UPC Case Code,X(12),21,O,UPC Case Code
+PARTNER,Product Qualifier,X(2),33,O,"Product Qualifier
+‘VN’"
+PARTNER,Product Code,X(48),35,O,"Product Code
+
+3PL Item Code"
+PARTNER,Product Qualifier,X(2),83,O,"Product Qualifier
+‘PD’"
+PARTNER,Inventory Level,X(48),85,O,Inventory Level 3
+PARTNER,Inventory Level,X(12),133,O,Inventory Level 2
+PARTNER,Weight,X(12),145,O,Net Weight
+PARTNER,Weight Qualifier,X(2),157,O,"Weight Qualifier
+‘N’"
+PARTNER,Weight Unit Code,(X1),159,O,"Unit Code
+‘L’ – Pounds
+‘K’ – Kilograms"
+PARTNER,Weight,X(12),160,O,"Weight
+
+Gross Weight"
+PARTNER,Weight Qualifier,X(2),172,O,"Weigh Qualifier
+
+‘G’ – Gross Weight "
+PARTNER,Weight Unit Code,X(1),174,O,"Unit Code
+‘L’ – Pounds
+‘K’ – Kilograms"
+PARTNER,Inventory Transaction Type,X(2),175,O,Not Used
+PARTNER,Product Qualifier,X(2),177,O,Product Qualifier
+PARTNER,Product Code,X(48),179,O,Inventory Level 4
+PARTNER,Hold Code,X(4),227,O,3PL Hold Code
+PARTNER,Adjustment Type,X(4),231,O,3PL Adjustment Type
+PARTNER,Adjustment Reason,X(30),235,O,3PL Adjustment Reason
+PARTNER,Warehouse Code,X(4),265,O,3PL Warehouse Code
+PARTNER,Record Type,X(4),1,R,"Record Type
+2030"
+PARTNER,Item Description 1,X(45),5,O,Item Description 1
+PARTNER,Inventory 2 Description,X(40),50,O,Inventory Level 2 Description
+PARTNER,Inventory 3 Description,X(40),90,O,Inventory Level 3 Description
+PARTNER,Inventory 4 Description,X(40),130,O,Inventory Level 4 Description
+PARTNER,Item Description 2,X(60),170,O,Item Description 2
+PARTNER,Record Type,X(4),1,R,"Record Type
+2041"
+PARTNER,Remark,X(45),5,O,Remark Text
+PARTNER,END,X(3),1,R,END

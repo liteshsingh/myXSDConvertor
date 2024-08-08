@@ -1,0 +1,445 @@
+<?xml version="1.0" ?>
+<xsd:schema xmlns="http://www.seeburger.com/Project_Name/Schema_Name" xmlns:bic="http://www.seeburger.com/bicng/lang/schema/" xmlns:inhouse="http://www.seeburger.com/bicng/lang/schema/inhouse" xmlns:xsd="http://www.w3.org/2001/XMLSchema" bic:messageType="INHOUSE" elementFormDefault="qualified" targetNamespace="http://www.seeburger.com/Project_Name/Schema_Name">
+	<xsd:import namespace="http://www.seeburger.com/bicng/lang/schema/inhouse" schemaLocation="platform:/plugin/com.seeburger.bicng.lang.schema.facade.inhouse/resources/inhouse.xsd"/>
+	<xsd:element name="Schema_Name">
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="inhouse:InhouseMessageRoot">
+					<xsd:sequence>
+						<xsd:element maxOccurs="1" minOccurs="0" name="BOL1">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="BOL1" maxOccurs="1" minOccurs="0" name="S_BOL1_T2TPRK">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="4"/>
+														<xsd:enumeration value="BOL1"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2DELY">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="10"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2TPCO">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="4"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2RESO">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="1"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2CDSO">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2MAIL">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="20"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2LGSB">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2ANNO">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="4"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2TPOR">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="4"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2DTDL">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="8"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2RIFC">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="10"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2SONR">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="10"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2MAGA">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="4"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2NRBO">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="10"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2DTBO">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="8"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2CATF">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2CODF">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="12"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2RAGF">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="50"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2RG2F">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="50"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2INDF">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="50"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2CAPF">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="10"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2LOCF">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2PROF">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="2"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2NAZF">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2CATD">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2CODD">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="12"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2RAGD">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="50"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2RG2D">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="50"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2INDD">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="50"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2CAPD">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="10"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2LOCD">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="35"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2PROD">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="2"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2NAZD">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2TPTR">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="25"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2DTTA">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="8"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2DNNR">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="10"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2CONT">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="15"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2DIVC">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2TIPC">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="3"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2VETT">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="10"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2ORA">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="6"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL1_T2PESO">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="13"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element maxOccurs="1" minOccurs="0" name="BOL2">
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="inhouse:Segment">
+										<xsd:sequence>
+											<xsd:element default="BOL2" maxOccurs="1" minOccurs="0" name="S_BOL2_R2TPRK">
+												<xsd:annotation>
+													<xsd:appinfo source="http://www.seeburger.com/bicng/lang/schema/">
+														<identifyingField xmlns="http://www.seeburger.com/bicng/lang/schema/inhouse">true</identifyingField>
+													</xsd:appinfo>
+												</xsd:annotation>
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="4"/>
+														<xsd:enumeration value="BOL2"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL2_R2DELY">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="10"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL2_R2ANNO">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="4"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL2_R2TPCO">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="4"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL2_R2NRBO">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="10"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL2_R2DTBO">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="8"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL2_R2MAGA">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="4"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL2_R2NRRI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="6"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL2_R2ARTI">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="17"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL2_R2DSAR">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="50"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL2_R2ARTC">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="20"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL2_R2NRRC">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="6"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL2_R2QTUN">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="15"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL2_R2PESL">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="13"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+											<xsd:element maxOccurs="1" minOccurs="0" name="S_BOL2_R2RECD">
+												<xsd:simpleType>
+													<xsd:restriction base="inhouse:AN">
+														<xsd:length value="4"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:extension>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

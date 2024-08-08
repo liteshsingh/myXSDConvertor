@@ -1,0 +1,152 @@
+Loop/Rec Name,Field Name,Description,Type,Dec,Format,Start,End,Length,min occ,max occ,OcC,Default Value,Correlation,Comments,Spec Logic
+Document,,,LS,,,,,,1,1,1..1,,,LOOP START - Document,
+OUT_REC,,,LS,,,,,,1,*,1..*,,,,
+FH,,,RC,,,,,,1,1,1..1,,,"Group Rule:
+Create one FH-FT per ST-SE in the input",
+,FH_Record_ID,,AN,,,1,3,3,1,1,M,,"""FH """,,
+,FH_TP_Code,,AN,,,4,18,15,1,1,M,,"GET_EVAR(""ESAPRF"")","Insert ""_"" after the first character.
+Example: GET_EVAR(""ESAPRF"") = HI_COLMBIA_940
+Output: H_I_COLMBIA_940",
+,FH_File_Create_Date,,DT,,YYYYMMDD,19,26,8,1,1,M,,GS_04_373,,
+,FH_File_Create_Time,,DT,,HHMMSS,27,32,6,1,1,M,,GS_05_337,"If value has no seconds portion, hardcode ""00"" to satisfy format",
+,FH_ISA_Control_Number,,AN,,,33,41,9,1,1,M,,ISA_13_I12,,
+,FH_GS_Control_Number,,AN,,,42,50,9,1,1,M,,ISA_06_I06,,
+OM1,,,RC,,,,,,1,1,1..1,,,,
+,OM1_Record_ID,,AN,,,1,3,3,1,1,M,,"""OM1""",,
+,OM1_PO_Number_Pickticket,,AN,,,4,25,22,1,1,M,,W05_02_285,,
+,OM1_PO_Type_Code,,AN,,,26,27,2,0,1,O,,W05_01_473,,
+,OM1_Alternate_PO_FPO_Buyer_PO,,AN,,,28,52,25,1,1,M,,W05_03_324,,
+,OM1_Link_Sequence_Number,,AN,,,53,58,6,0,1,O,,W05_04_472,,
+,OM1_Master_Reference_Number,,AN,,,59,80,22,0,1,O,,W05_05_474,,
+OM2,,,RC,,,,,,1,*,1..*,,,"Group Rule:
+Create this record for each occurrence of 0100_Loop in the input",
+,OM2_Record_ID,,AN,,,1,3,3,1,1,M,,"""OM2""",,
+,OM2_Entity_Identifier_Code,,AN,,,4,6,3,1,1,M,,N1_01_98,,
+,OM2_Location_Name,,AN,,,7,66,60,1,1,M,,N1_02_93,,
+,OM2_Location_Qualifer,,AN,,,67,68,2,1,1,M,,N1_03_66,,
+,OM2_Location_Code,,AN,,,69,148,80,1,1,M,,N1_04_67,,
+,OM2_Location_Address1,,AN,,,149,208,60,0,1,O,,N2_01_93,,
+,OM2_Location_Address2,,AN,,,209,268,60,0,1,O,,N2_02_93,,
+,OM2_Location_Address3,,AN,,,269,323,55,0,1,O,,N3_01_166,,
+,OM2_Location_Address4,,AN,,,324,378,55,0,1,O,,N3_02_166,,
+,OM2_Location_City,,AN,,,379,408,30,0,1,O,,N4_01_19,,
+,OM2_Location_State,,AN,,,409,410,2,0,1,O,,N4_02_156,,
+,OM2_Location_Zip,,AN,,,411,425,15,0,1,O,,N4_03_116,,
+,OM2_Location_Country,,AN,,,426,440,15,0,1,O,,N4_04_26,,
+OO1,,,RC,,,,,,1,1,1..1,,,,
+,OO1_Record_ID,,AN,,,1,3,3,1,1,M,,"""OO1""",,
+,OO1_PO_Date,,DT,,YYYYMMDD,4,11,8,0,1,O,,"If G62_01_432 = ""10"" && G62_02_373 != Null
+   G62_02_373
+EndIf",,
+,OO1_Date_Ship_Not_Before_Requested_Ship,,DT,,YYYYMMDD,12,19,8,0,1,O,,"If G62_01_432 = ""01"" && G62_02_373 != Null
+   G62_02_373
+EndIf
+If G62_01_432 = ""10"" && G62_02_373 != Null
+   G62_02_373
+EndIf",,
+,OO1_Date_Ship_No_Later_Cancel,,DT,,YYYYMMDD,20,27,8,0,1,O,,"If G62_01_432 = ""02"" && G62_02_373 != Null
+   G62_02_373
+EndIf
+If G62_01_432 = ""01"" && G62_02_373 != Null
+   G62_02_373
+EndIf",,
+,OO1_Date_Delivery_Request,,DT,,YYYYMMDD,28,35,8,0,1,O,,"If G62_01_432 = ""02"" && G62_02_373 != Null
+   G62_02_373
+EndIf",,
+OR1,,,RC,,,,,,0,1,0..1,,,,
+,OR1_Record_ID,,AN,,,1,3,3,1,1,M,,"""OR1""",,
+,OR1_Terms_Basis_Date_Code,,AN,,,4,5,2,0,1,O,,,,
+,OR1_Terms_Description,,AN,,,6,20,15,0,1,O,,,,
+,OR1_Department,,AN,,,21,50,30,0,1,O,,"If N9_01_128 = ""DP"" && N9_02_127 != Null
+   N9_02_127
+EndIf",,
+,OR1_Internal_Customer_no,,AN,,,51,80,30,0,1,O,,"If N9_01_128 = ""CR"" && N9_02_127 != Null
+   N9_02_127
+EndIf",,
+,OR1_Manufacturer_ID_Vendor_Number,,AN,,,81,110,30,0,1,O,,"If N9_01_128 = ""VN"" && N9_02_127 != Null
+   N9_02_127
+EndIf",,
+,OR1_Manufacturer_Name,,AN,,,111,140,30,0,1,O,,"If N9_01_128 = ""IA"" && N9_02_127 != Null
+   N9_02_127
+EndIf",,
+,OR1_Direct_Ship_Flag,,AN,,,141,145,5,0,1,O,,,,
+,OR1_Label_Format_Code,,AN,,,146,175,30,0,1,O,,"If N9_01_128 = ""LA"" && N9_02_127 != Null
+   N9_02_127
+EndIf",,
+,OR1_Transportation_Mode,,AN,,,176,177,2,0,1,O,,,,
+,OR1_PO,,AN,,,178,207,30,0,1,O,,"If N9_01_128 = ""PO"" && N9_02_127 != Null
+   N9_02_127
+EndIf",,
+,OR1_Packing_List_Number,,AN,,,208,237,30,0,1,O,,"If N9_01_128 = ""PK"" && N9_02_127 != Null
+   N9_02_127
+EndIf",,
+,OR1_Plant_Number,,AN,,,238,267,30,0,1,O,,"If N9_01_128 = ""WH"" && N9_02_127 != Null
+   N9_02_127
+EndIf",,
+,OR1_Delivery_Number,,AN,,,268,297,30,0,1,O,,"If N9_01_128 = ""DO"" && N9_02_127 != Null
+   N9_02_127
+EndIf",,
+,OR1_Carrier_SCAC,,AN,,,298,312,15,0,1,O,,,,
+,OR1_Delivery_Description,,AN,,,313,342,30,0,1,O,,"If N9_01_128 = ""ZZ"" && N9_02_127 N9_03_369 != Null
+   N9_02_127 N9_03_369
+EndIf",,
+OR2,,,RC,,,,,,0,1,0..1,,,,
+,OR2_Record_ID,,AN,,,1,3,3,1,1,M,,"""OR2""",,
+,OR2_WHSE_Notes_Instructions,,AN,,,4,83,80,0,1,O,,"If NTE_01_363 = ""WHI"" && NTE_02_352 != Null
+   NTE_02_352
+End If",,
+,OR2_DEL_Notes_Instructions,,AN,,,84,163,80,0,1,O,,"If NTE_01_363 = ""DEL"" && NTE_02_352 != Null
+   NTE_02_352
+End If",,
+IM1_GROUP,,,LS,,,,,,1,*,1..*,,,"LOOP START - IM1_GROUP
+
+Group Rule:
+Generate this group for each occurrence of 0310_Loop in the input",
+IM1,,,RC,,,,,,1,1,1..1,,,,
+,IM1_Record_ID,,AN,,,1,3,3,1,1,M,,"""IM1""",,
+,IM1_Item_Style,,AN,,,4,19,16,0,1,O,,,,
+,IM1_Item_Quantity_Ordered,,N,,,20,34,15,0,1,O,,W01_01_330,,
+,IM1_Item_Quantity_Ordered_UOM,,N,,,35,36,2,0,1,O,,W01_02_355,,
+,IM1_UPC_Number,,AN,,,37,48,12,0,1,O,,W01_03_438,,
+,IM1_Product_Qualifier1,,AN,,,49,50,2,0,1,O,,W01_04_235,,
+,IM1_Material_Number,,AN,,,51,98,48,0,1,O,,W01_05_234,,
+,IM1_Unit_Price,,AN,,,99,99,1,0,1,O,,,,
+,IM1_Product_Qualifier2,,AN,,,100,101,2,0,1,O,,W01_06_235,,
+,IM1_Alternate_Sku,,AN,,,102,149,48,0,1,O,,W01_07_234,,
+IRX,,,RC,,,,,,1,1,1..1,,,,
+,IRX_Record_ID,,AN,,,1,3,3,1,1,M,,"""IRX""",,
+,IRX_Line_Item_Identifier,,AN,,,4,33,30,0,1,O,,"If N9_1_01_128 = ""LI"" && N9_1_02_127 != Null
+   N9_1_02_127
+EndIf",,
+,IRX_Sales_Order_Number,,AN,,,34,63,30,0,1,O,,"If N9_1_01_128 = ""VN"" && N9_1_02_127 != Null
+   N9_1_02_127
+EndIf",,
+,IRX_FG_PO_Number,,AN,,,64,93,30,1,1,"
+M",,"If N9_1_01_128 = ""PO"" && N9_1_02_127 != Null
+   N9_1_02_127
+EndIf","Must always be present in every IM1 occurrence.  Fail map and generate error message ""Missing mandatory IRX_FG_PO_Number field"" if any occurrence is missing/null.",
+,IRX_Delivery_Number,,AN,,,94,123,30,0,1,O,,"If N9_1_01_128 = ""DO"" && N9_1_02_127 != Null
+   N9_1_02_127
+EndIf",,
+,IRX_Description,,AN,,,124,203,80,0,1,O,,"If N9_1_01_128 = ""DO"" && N9_1_03_369 != Null
+   N9_1_03_369
+EndIf",,
+END_IM1_GROUP,,,LE,,,,,,,,,,,LOOP END - IM1_GROUP,
+SUM,,,RC,,,,,,0,*,0..*,,,,
+,SUM_Record_ID,,AN,,,1,3,3,0,1,O,,"""SUM""",Create for each occurrence of W76,
+,SUM_Quantity_Ordered,,AN,,,4,18,15,0,1,O,,W76_01_330,,
+,SUM_Weight,,AN,,,19,28,10,0,1,O,,W76_02_81,,
+,SUM_Weight_UOM,,AN,,,29,30,2,0,1,O,,W76_03_355,,
+,SUM_Volume,,AN,,,31,38,8,0,1,O,,W76_04_183,,
+,SUM_Volume_UOM,,AN,,,39,40,2,0,1,O,,W76_05_355,,
+FT,,,RC,,,,,,1,1,1..1,,,,
+,FT_Record_ID,,AN,,,1,3,3,1,1,M,,"""FT """,,
+,FT_TP_Code,,AN,,YYYYMMDD,4,18,15,1,1,M,,"GET_EVAR(""ESAPRF"")","Insert ""_"" after the first character.
+Example: GET_EVAR(""ESAPRF"") = HI_COLMBIA_940
+Output: H_I_COLMBIA_940",
+,FT_File_Create_Date,,DT,,HHMMSS,19,26,8,1,1,M,,GS_04_373,,
+,FT_File_Create_Time,,DT,,,27,32,6,1,1,M,,GS_05_337,"If value has no seconds portion, hardcode ""00"" to satisfy format",
+,FT_ISA_Control_Number,,AN,,,33,41,9,1,1,M,,ISA_13_I12,,
+,FT_GS_Control_Number,,AN,,,42,50,9,1,1,M,,ISA_06_I06,,
+END_OUT_REC,,,LE,,,,,,,,,,,LOOP END - OUT_REC,
+END_DOCUMENT,,,LE,,,,,,,,,,,LOOP END - DOCUMENT,

@@ -1,0 +1,192 @@
+Record_Name,Field Business Name,"Field
+Length","Starting
+Position","Required/ Optional
+",Description
+PARTNER,PARTNER,X(8),1,R,Identify the Record ‘PARTNER’
+PARTNER,PARTNER,X(10),9,R,Customer Code in 3PL
+PARTNER,SET,X(3),1,R,Identify the Record ‘SET’
+PARTNER,SET,X(3),9,R,Transaction Set ID ‘ASN’
+PARTNER,ROUTE,X(8),1,R,Identify the Record ‘ROUTE’ 
+PARTNER,ROUTE,X(10),9,R,Customer Code in 3PL
+PARTNER,COMPANY,X(8),1,R,Identify the Record ‘COMPANY’
+PARTNER,COMPANY,X(2),9,R,Company Code in 3PL
+PARTNER,BEGIN,X(8),1,R,Identify Record
+1020,Record Type,X(4),1,R,"Record Type 
+1020"
+1020,Reporting Code,X(1),5,R,"Reporting Code
+‘00’ – Original Order"
+1020,Depositor Order Number,X(22),6,O,"Depositor Order Number
+Customer order number"
+1020,Date,X(8),28,O,"Date ‘CCYYMMDD’
+System Date"
+1020,Shipment ID,X(30),36,O,Order Alternate Reference 1
+1020,Agent Shipment ID,X(12),66,O,3PL Order Number
+1020,Purchase Order Number,X(22),78,O,Purchase Order Number
+1020,Order Alternate Reference 2,X(22),100,O,Order Alternate Reference 2
+1020,System Time,X(8),122,O,"Time ‘HHMI’
+System Time"
+1020,Special Handling Code,X(3),130,O,Reserve for future
+1020,Reason Code,X(2),133,O,Reserve for future
+1020,Transaction Type Code,X(2),135,O,Reserve for future
+1020,Action Code,X(2),137,O,Reserve for future
+1020,Load Number,X(20),139,O,Load Number
+1020,Reference 1,X(20),159,O,Parcel Account Number
+1020,Reference 2,X(20),159,O,Consignee Reference 1
+1020,Reference 3,X(20),179,O,Consignee Reference 2
+1020,Reference 4,X(20),199,O,Consignee Reference 3
+1020,Reference 5,X(20),219,O,Consignee Reference 4
+1040,Record Type,X(4),1,R,"Record Type 
+1040"
+1040,Entity ID Code,X(3),5,R,"Organization ID Code
+‘WH’ – Warehouse"
+1040,Name,X(60),8,R,Company Name 
+1040,ID Type,X(2),68,O,‘91’ – Assigned by Seller
+1040,Entity Code,X(80),70,O,Company Reference
+1040,Record Type,X(4),1,R,"Record Type 
+1040"
+1040,Entity ID Code,X(3),5,R,"Organization ID Code
+‘DE’ – Depositor"
+1040,Name,X(60),8,R,Depositor Name (Customer Name)
+1040,ID Type,X(2),68,O,‘91’ – Assigned by Seller
+1040,Entity Code,X(80),70,O,Customer Reference
+1040,Record Type,X(4),1,R,"Record Type 
+1040"
+1040,Entity ID Code,X(3),5,R,"Organization ID Code
+‘ST’  -- Ship to"
+1040,Name,X(60),8,R,Consignee Name
+1040,ID Type,X(2),68,O,91
+1040,Entity Code,X(80),70,O,Consignee Code or ID
+1060,Record Type,X(4),1,R,"Record Type
+1060"
+1060,Address,X(55),5,O,Address 1
+1060,Address,X(55),60,O,Address 2
+1060,Address,X(55),115,O,Address 3
+1060,Address,X(55),170,O,Address 4
+1070,Record Type,X(4),1,R,"Record Type
+1070"
+1070,City,X(30),5,O,City Name
+1070,State,X(2),35,O,State Code
+1070,Postal/Zip,X(15),37,O,Postal Code
+1070,Country,X(3),52,O,Country Code
+1070,Location Qualifier,X(2),55,O,Filler
+1070,Location,X(30),57,,Filler
+1070,State Extended,X(4),87,O,State Code
+1110,Record Type,X(4),1,R,"Record Type 
+1110"
+1110,Qualifier,X(2),5,R,"Date Qualifier
+‘02’ – Requested Arrival Date;"
+1110,Date,X(8),7,R,Order to Arrive Date – ‘CCYYMMDD’
+1110,Record Type,X(4),1,R,"Record Type 
+1110"
+1110,Qualifier,X(2),5,R,"Date Qualifier
+‘10’ – Ship Date;"
+1110,Date,X(8),7,R,Order To Ship Date – ‘CCYYMMDD’
+1110,Record Type,X(4),1,R,"Record Type 
+1110"
+1110,Qualifier,X(2),5,R,"Date Qualifier
+‘52’ – Order Date."
+1110,Date,X(8),7,R,Order Date – ‘CCYYMMDD’
+1110,Record Type,X(4),1,R,"Record Type 
+1110"
+1110,Qualifier,X(2),5,R,"Date Qualifier
+‘11’ – Shipped on this Date"
+1110,Date,X(8),7,R,System Order Confirmation Date – ‘CCYYMMDD’
+1120,Record Type,X(4),1,R,"Record Type 
+1120"
+1120,Note Reference Code,X(3),5,O,‘WHI’
+1120,Free Form Message,X(80),8,O,Header Remark
+1130,Record Type,X(4),1,R,"Record Type 
+1130"
+1130,Transportation Method,X(2),5,R,Transportation Type
+1130,SCAC,X(4),7,R,Standard Carrier Alpha Code  
+1130,Routing,X(35),11,R,Routing  - Carrier Name
+1130,Method of Payment,X(2),46,R,Method of payment
+1130,Equipment Description Code,X(2),48,O,Not Used
+1130,Equipment Initial,X(4),50,O,Not Used
+1130,Equipment Number,X(10),54,O,Not Used
+1130,Shipment Order Status Code,X(2),64,O,Not Used
+1130,Special Handling Code,X(3),66,O,Not Used
+1130,Carrier Change Reason Code,X(2),69,O,Not Used
+1130,Power Unit Number,X(20),71,O,Power Unit Number
+1130,Carry Unit Number,X(20),91,O,Carry Unit Number
+1130,Vessel Number,X(20),111,O,Vessel Number
+1130,Voyage Number,X(20),131,O,Voyage Number
+1140,Record Type,X(4),1,R,"Record Type 
+1140"
+1140,Packing  Code,X(5), 5,R,"‘CTN25’- If Case only;
+Otherwise 
+‘PLT49’- Pallet/Case or Pallet"
+1140,Lading Quantity ,X(12),10 ,R,Number of pieces 
+1140,Weight,X(12),22,R,Total Wight of the pieces 
+1140,Weight Qualifier,X(2),34,R,‘G’- Gross weight
+1140,Unit of measure,X(2),36,R,"‘KG’- Kilogram
+‘LB’- Pound"
+1150,Record Type,X(4),1,R,"Record Type 
+1150"
+1150,Unit Load Option Code,X(2),5,O,Not Used
+1150,Quantity of Pallet Shipped,X(5),7,O,Quantity of Pallets Shipped
+1150,Pallet Exchange Code,X(1),12,O,Pallet Exchange Code
+1150,Seal Number,X(15),13,O,Seal 1
+1150,Seal Number,X(15),28,O,Seal 2
+1150,Temperature,X(6),43,O,Temperature Front
+1150,Unit or Basis for Measurement,X(2),49,O,FA
+1150,Temperature,X(6),51,O,Temperature Back
+1150,Unit or Basis for Measurement,X(2),57,O,FA
+2005,Record Type,X(4),1,R,"Record Type
+2005"
+2005,Assigned Number,X(9),5,O,Assigned Number
+2010,Record Type,X(4),1,R,"Record Type
+2010"
+2010,Marks and Number Qualifier,X(2),5,M,‘GM’ - SSCC-18 and Application Identifier
+2010,Serial Container number ,X(48),7,M,"Container  Number if Pallet or Pallet/Case 
+
+Carton ID"
+2010,Carrier Tracking Number,X(40),55,O,Carrier Tracking Number
+2010,UCC128 Number,X(40),95,O,UCC128 Number
+2010,Carton Reference Number,X(40),135,O,Carton Reference Number
+2010,Carton Size Code,X(4),175,O,Carton Size Code
+2010,Cost Amount,X(10),179,O,Cost Amount 
+2020,Record Type,X(4),1,R,"Record Type 
+2020"
+2020,Order Status,X(2),5,O,Order Status Code
+2020,Ordered Quantity,X(17),7,O, Quantity
+2020,Shipped Quantity,X(12),24,O,Quantity
+2020,Quantity Difference,X(11),36,O,Quantity Difference
+2020,Unit of Measurement Code,X(2),47,O,EDI Unit of Measurement Code
+2020,UPC Case Code,X(20),49,O,UPC Case Code
+2020,Item Code ,X(40),69,O,3PL Item code 
+2020,Inventory Level 2,X(40),109,O,3PL inventory Level 2
+2020,Inventory Level 3,X(40),149,O,3PL inventory Level 3
+2020,Inventory Level 4,X(40),189,O,3PL inventory Level 4
+2020,Weight	,X(12),229,O,Gross weight 
+2020,Weight Qualifier,X(2),241,O,‘G’- Gross 
+2020,Weight Unit Code,X(1),243,O,‘L’- Pound
+2020,Weight	,X(12),244,O,Net Weight 
+2020,Weight Qualifier,X(2),256,O,‘N’- Net 
+2020,Weight Unit Code,X(1),258,O,‘L’- pound
+2020,Case ID,X(48),259,O,Case ID
+2020,Expiry date ,X(8),307,O,Inventory expiry date 
+2020,UCC 128 Number,X(40),347,O,UCC128 Number
+2020,Carrier Tracking Number,X(40),387,O,Carrier Tracking Number
+2030,Record Type,X(4),1,R,"Record Type
+2030"
+2030,Description 1,X(45),5,O,Item Description
+2030,Description 2,X(40),50,O,Inventory Level 2 Description
+2030,Description 3,X(40),90,O,Inventory Level 3 Description
+2030,Description 4,X(40),130,O,Inventory Level 4 Description
+2030,Alternate Description,X(40),170,O,Item Alternate Description
+2030,Inventory UOM,X(20),210,O,List of UOM (SKU Code) applicable for Inventory associated with this record (SKU_CODE_FACT)
+2030,Inventory Quantity Break Down,X(30),230,O,"Inventory Quantity Break Down applicable for Inventory associated with this record 
+(INVT_QTY_BKD_FACT)"
+2040,Record Type,X(4),1,R,"Record Type
+2040"
+2040,Qualifier,X(3),5,O,"Reference Qualifier
+"
+2040,Reference ID,X(30),8,O,Reference Number
+2040,Reference Description,X(45),38,O,Not Used
+3010,Record Type,X(4),1,R,"Record Type 
+3010"
+3010,Number of Units Shipped  ,R(12),5,R,Number of Units Shipped  
+3010,Total Weight,R(12),17,R,Total Weight
+3010,Unit of Measurement Code,X(2),29,R,Unit of Measurement Code
+END,END,X(3),1,R,END
