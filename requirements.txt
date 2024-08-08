@@ -1,5 +1,5 @@
 # https://pypi.org/project/Flask
-Flask==2.2.3
+Flask==3.1.0
 pandas
 numpy
-gunicorn==2.2.2
+gunicorn
